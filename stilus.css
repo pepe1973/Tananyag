@@ -1,0 +1,41 @@
+@import url('./fo_css/valtozok.css');
+
+* {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: var(--system);
+}
+
+#title-kontener {
+    align-items: center;
+    background-color: blue;
+    color: whitesmoke;
+    display: flex;
+    height: 3em;
+    padding: 1em;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    z-index: 10;
+}
+
+#main-kontener {
+    list-style-type: square;
+    margin: 4em auto;
+    width: 80%;
+}
+
+#main-kontener ul {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+#main-kontener a {
+    color: var(--kek);
+    text-decoration: none;
+}

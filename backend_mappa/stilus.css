@@ -1,0 +1,64 @@
+@import url('./alkalmazas_css/valtozok.css');
+@import url('./alkalmazas_css/balKontener.css');
+@import url('./alkalmazas_css/jobbKontener.css');
+@import url('./alkalmazas_css/row3.css');
+
+* {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: var(--system);
+}
+
+#title-kontener {
+    align-items: center;
+    background-color: blue;
+    color: whitesmoke;
+    display: flex;
+    height: 3em;
+    padding: 1em;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    z-index: 10;
+}
+
+#title-kontener a {
+    color: var(--feher);
+    text-decoration: none;
+}
+
+.material-symbols-outlined {
+    align-items: center;
+    color: var(--feher);
+    cursor: pointer;
+    display: flex;
+    margin-right: 5px;
+    user-select: none;
+}
+
+button {
+    font-family: var(--system);
+}
+
+ol {
+    list-style-position: inside;
+}
+
+ul {
+	list-style-position: inside;
+	list-style-type: square;
+}
+
+ol li {
+    margin-bottom: 1em;
+}
+
+ul li {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
