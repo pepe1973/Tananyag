@@ -2,7 +2,7 @@ let betolt_02 = `
 	<h1>Fogalmak 1</h1> 
     <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 			<span class="kiemel">Backend programozás:</span> a
@@ -13,7 +13,7 @@ let betolt_02 = `
 			biztonságáért. 
 			</p>
 			</div>
-		<div class="kozep-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">Szerveroldali logika:</span> a
@@ -21,7 +21,7 @@ let betolt_02 = `
 				kéréseket és feldolgozza azokat.
 			</p>
 		</div>
-		<div class="kozep-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">package.json:</span> egy speciális állomány, amely leírja a 
@@ -31,7 +31,7 @@ let betolt_02 = `
 			<p>Ez a fájl elengedhetetlen a <span class="kiemel">Node.js</span> projektek kezeléséhez és megosztásához,
 			 különösen <span class="kiemel">npm</span> (<span class="kiemel">Node Package Manager</span>) használatakor.</p>
 		</div>
-		<div class="jobb-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">API:</span> Az API (Application

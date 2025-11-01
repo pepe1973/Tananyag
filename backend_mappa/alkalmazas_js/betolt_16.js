@@ -3,7 +3,7 @@ let betolt_16 = `
     <p>Ebben a részben összekötjük a <span class="kiemel">webszerver</span>ünket a korábban létrehozott 
 	<code>Cukraszda</code> <span class="kiemel">MongoDb</span> projektünkkel.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Parancssor:</h3>
 			<div class="kod-kontener">
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend</span></code></p>
@@ -11,10 +11,10 @@ let betolt_16 = `
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/utils</span></code></p>
 				<p><code class="parancs">$ touch dbConnection.mjs</code></p>
 			</div>
-			</div>
-		<div class="kozep-3-kontener">
-		<h3>Visual Studio Code:</h3>
-		<p><code>dbConnection.mjs</code></p>
+		</div>
+		<div class="kontener">
+			<h3>Visual Studio Code:</h3>
+			<p><code>dbConnection.mjs</code></p>
 			<pre>
 import mongoose from 'mongoose';
 
@@ -50,16 +50,14 @@ const app = express();
     });</span> 
 			</pre>
 		</div>
-		<div class="jobb-3-kontener">
-		<h3>Magyarázat:</h3>
-		<p>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<p>
 				Lépjünk be a <code>utils</code> mappába.
 			</p>
 			<p>
 				Ehhez adjuk ki a
-				<code
-					>cd utils</code
-				>
+				<code>cd utils</code>
 				utasítást a parancssorban. 
 			</p>
 			<p>
@@ -67,17 +65,15 @@ const app = express();
 			</p>
 			<p>
 				Ehhez adjuk ki a
-				<code
-					>touch dbConnection.mjs</code
-				>
+				<code>touch dbConnection.mjs</code>
 				utasítást a parancssorban. 
 			</p>
 			<p>Csak a <span class="kiemel">Git Bash</span> felületen működik!</p>
 		</div>
-		<div class="jobb-3-kontener">
-		<h3>Magyarázat:</h3>
-		<p>A <code>dbConnection.mjs</code> állomány szerkesztése.</p>
-		<ol>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<p>A <code>dbConnection.mjs</code> állomány szerkesztése.</p>
+			<ol>
 				<li>
 					<code>import mongoose from 'mongoose';</code> -
 					importáljuk be a <code>mongoose</code> csomagot.
@@ -96,9 +92,7 @@ const app = express();
 					<span class="kiemel">promise</span> eltárolására.
 				</li>
 				<li>
-					<code
-						>await mongoose.connect(process.env.DBSTRING);</code
-					>
+					<code>await mongoose.connect(process.env.DBSTRING);</code>
 					- a <span class="kiemel">promise</span>.
 				</li>
 				<li>
@@ -114,10 +108,7 @@ const app = express();
 			<p>Módosítások a <code>server.mjs</code> állományban.</p>
 			<ol>
 				<li>
-					<code
-						>import dbConnect from
-						'./utils/dbConnection.mjs';</code
-					>
+					<code>import dbConnect from './utils/dbConnection.mjs';</code>
 					- a <code>dbConnect</code> függvény beimportálása az
 					adott állományból.
 				</li>
@@ -126,24 +117,12 @@ const app = express();
 					<span class="kiemel">promise</span> meghívása.
 				</li>
 				<li>
-					<code
-						>.then(() => { console.log('Sikeres adatbázis
-						csatlakozás!');})</code
-					>
-					- a <span class="kiemel">promise</span> "teljesült" (<span
-						class="kiemel"
-						>fulfilled</span
-					>) ága.
+					<code>.then(() => { console.log('Sikeres adatbázis csatlakozás!');})</code>
+					- a <span class="kiemel">promise</span> "teljesült" (<span class="kiemel">fulfilled</span>) ága.
 				</li>
 				<li>
-					<code
-						>.catch((error) => { console. error(\`A hiba oka:
-						\${error.message}\`); });</code
-					>
-					- a <span class="kiemel">promise</span> "eldobott" (<span
-						class="kiemel"
-						>rejected</span
-					>) ága.
+					<code>.catch((error) => { console. error(\`A hiba oka: \${error.message}\`); });</code>
+					- a <span class="kiemel">promise</span> "eldobott" (<span class="kiemel">rejected</span>) ága.
 				</li>
 			</ol>
 		</div>

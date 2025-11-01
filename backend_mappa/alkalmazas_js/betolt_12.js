@@ -2,17 +2,17 @@ let betolt_12 = `
 	<h1>Függőségek (dependencies) beállítása</h1> 
     <p>Ebben a részben telepíteni fogjuk a szükséges <span class="kiemel">npm</span> csomagokat.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Parancssor:</h3>
 			<div class="kod-kontener">
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend</span></code></p>
 				<p><code class="parancs">$ npm install bcrypt cloudinary cors dotenv ejs express mongoose</code></p>
 			</div>
-			</div>
-		<div class="kozep-3-kontener">
-		<h3>Visual Studio Code:</h3>
-		<p><code>package.json</code></p>
-		<pre>
+		</div>
+		<div class="kontener">
+			<h3>Visual Studio Code:</h3>
+			<p><code>package.json</code></p>
+			<pre>
 {
     "name": "backend",
     "version": "1.0.0",
@@ -35,26 +35,23 @@ let betolt_12 = `
         "mongoose": "^8.19.2"
     }</span>
 }
-	</pre>
+			</pre>
 		</div>
-		<div class="jobb-3-kontener">
-		<h3>Magyarázat:</h3>
-		<p>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<p>
 				A <code>backend</code> mappában telepítsük
 				a függőségeket (dependencies).
 			</p>
 			<p>
 				Ehhez adjuk ki az
-				<code
-					>npm install bcrypt cloudinary cors dotenv ejs
-					express mongoose</code
-				>
+				<code>npm install bcrypt cloudinary cors dotenv ejs express mongoose</code>
 				utasítást a parancssorban.
 			</p>
 		</div>
-		<div class="jobb-3-kontener">
-		<h3>Magyarázat:</h3>
-		<ol>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<ol>
 				<li><code>bcrypt</code> - adatok titkosításához.</li>
 				<li>
 					<code>cloudinary</code> - felhőalkalmazás képek
@@ -66,7 +63,7 @@ let betolt_12 = `
 					kezeléséhez.
 				</li>
 				<li>
-					<code>ejs</code> - megjelenítő motor beállításához.
+					<code>ejs</code> - nézetmotor beállításához.
 				</li>
 				<li>
 					<code>express</code> - szerverkörnyezet

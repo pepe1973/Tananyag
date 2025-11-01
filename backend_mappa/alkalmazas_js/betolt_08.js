@@ -2,7 +2,7 @@ let betolt_08 = `
 	<h1>Fogalmak 7</h1> 
     <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">HTTP methods:</span> a HTTP
@@ -45,11 +45,11 @@ let betolt_08 = `
 				</li>
 			</ol>
 			</div>
-		<!-- <div class="kozep-3-kontener">
-		<h3>Fogalom:</h3>
+		<!-- <div class="kontener">
+			<h3>Fogalom:</h3>
 		</div>
-		<div class="jobb-3-kontener">
-		<h3>Fogalom:</h3>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
 		</div> -->
 	</div>
 	`;

@@ -18,7 +18,28 @@ betoltTomb.push(
     betolt_14,
     betolt_15,
     betolt_16,
-    betolt_17
+    betolt_17,
+    betolt_18,
+    betolt_19,
+    betolt_20,
+    betolt_21,
+    betolt_22,
+    betolt_23,
+    betolt_24,
+    betolt_25,
+    betolt_26,
+    betolt_27,
+    betolt_28,
+    betolt_29,
+    betolt_30,
+    betolt_31,
+    betolt_32,
+    betolt_33,
+    betolt_34,
+    betolt_35,
+    betolt_36,
+    betolt_37,
+    betolt_38
 );
 
 const jobbKontener = document.querySelector('#jobb-kontener');

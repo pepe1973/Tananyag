@@ -5,9 +5,7 @@
     margin-bottom: 1em;
 }
 
-.bal-3-kontener,
-.kozep-3-kontener,
-.jobb-3-kontener {
+.kontener {
     border: 1px solid grey;
     padding: 1em;
     display: flex;

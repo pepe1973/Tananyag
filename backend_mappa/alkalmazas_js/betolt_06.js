@@ -2,7 +2,7 @@ let betolt_06 = `
 	<h1>Fogalmak 5</h1> 
     <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">Endpoint:</span> a
@@ -32,7 +32,7 @@ let betolt_06 = `
 				endpoint
 			</p>
 			</div>
-		<div class="kozep-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">Route:</span> egy olyan leképezés,
@@ -81,19 +81,47 @@ let betolt_06 = `
 				</li>
 			</ol>
 		</div>
-		<div class="jobb-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">CRUD:</span> az állandó adattárolás
-				négy alapvető funkciójának betűszava: <span class="kiemel">létrehozás</span>,
-				<span class="kiemel">olvasás</span>, <span class="kiemel">frissítés</span> 
-				és <span class="kiemel">törlés</span>. Ezek a műveletek alapvető
-				fontosságúak az alkalmazásokban és adatbázisokban lévő
-				adatok kezeléséhez, lehetővé téve a felhasználók számára
-				új rekordok hozzáadását, meglévő adatok lekérését,
-				aktuális rekordok módosítását és régi adatok
-				eltávolítását .
+				<span class="kiemel">Request params:</span> kérés paraméterek lehetővé teszik az adatok átadását egy API-végpontnak kérés kezdeményezésekor. 
+				Fontos részét képezik a REST API-k tervezésének és használatának. 
 			</p>
+			<p>
+				A <span class="kiemel">request params</span>, más néven <span class="kiemel">query params</span> (lekérdezési paraméterek)
+				vagy <span class="kiemel">URL params</span> (URL-paraméterek), kulcs-érték párok, 
+				amelyeket a rendszer hozzáfűz az URL-hez HTTP-kérés kezdeményezésekor. 
+				A paraméterek láthatók az URL-ben, és lehetővé teszik a kliens számára, 
+				hogy egyszerű és szabványosított módon továbbítson adatokat az API-nak.
+			</p>
+			<h5>Típusok:</h5>
+			<ol>
+				<li><b>Query Parameters:</b> a lekérdezési paraméterek a leggyakoribb típusok. 
+				Ezeket egy <code>?</code> karakter után fűzzük hozzá az URL-útvonalhoz:
+				<p><code>/users?page=1&per_page=20</code></p>
+				</li>
+			</ol>
+			<ol>
+				<li><b>Path Parameters:</b> Az elérési út paraméterei beépülnek magába az URL elérési útjába:
+				<p><code>/users/{userId}</code></p>
+				</li>
+			</ol>
+		</div>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
+				<span class="kiemel">req.params:</span> egy objektum, amely tartalmazza az URL-útvonalból kinyert paramétereket, 
+				például a <code>/user/:name</code> útvonalban a <code>:name</code>-hez tartozó értéket. 
+				Ez segít a szervernek megérteni a kérés specifikus részleteit, lehetővé téve az adatok kinyerését közvetlenül az 
+				<span class="kiemel">URL</span>-ből. 
+			</p>
+			<ol>
+				<li><b>Hogyan működik:</b> Ha egy útvonalat a <code>user/:name</code> formában definiálsz, 
+				a <code>req.params.name</code> hozzáférhet a felhasználó nevéhez az <span class="kiemel">URL</span>-ből.</li>
+				<li><b>Szerepe:</b> A <span class="kiemel">req.params</span> objektum segít az azonosításon alapuló lekérések megvalósításában, 
+				például egy adott felhasználó profiljának lekérdezésében.</li>
+				<li><b>Példa:</b> Egy <code>GET /user/123</code> kérés esetén a <code>req.params.id</code> értéke 123 lenne. </li>
+			</ol>
 		</div>
 	</div>
 	`;

@@ -2,7 +2,7 @@ let betolt_05 = `
 	<h1>Fogalmak 4</h1> 
     <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">MongoDb:</span> egy
@@ -37,8 +37,35 @@ let betolt_05 = `
 					forráskódú szoftver.
 				</li>
 			</ol>
-			</div>
-		<div class="kozep-3-kontener">
+		</div>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
+				<span class="kiemel">MongoDb model:</span> a modell a
+				<span class="kiemel">MongoDB</span>-ben egy
+				adatbázis-gyűjteményt (<span class="kiemel"
+					>collection</span
+				>) képvisel, és meghatározza, milyen szerkezetű (séma
+				alapján) <span class="kiemel">dokumentum</span>okat
+				lehet abban tárolni.
+			</p>
+			<p>
+				A modell egy JavaScript-osztály, amit a
+				<span class="kiemel">Mongoose</span> a
+				<span class="kiemel">Schema</span> alapján hoz létre.
+			</p>
+			<p>
+				A modell segítségével tudunk adatokat olvasni,
+				létrehozni, frissíteni és törölni a
+				<span class="kiemel">MongoDB</span>-ben (<span
+					class="kiemel"
+					>CRUD</span
+				>
+				műveletek).
+			</p>
+			<p><b>Model = Collection + Schema + CRUD logika</b></p>
+		</div>
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">Promise:</span> programozásban egy
@@ -57,13 +84,13 @@ let betolt_05 = `
 				kezelésére.
 			</p>
 		</div>
-		<div class="jobb-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">Middleware:</span> olyan függvény,
 				amely hozzáféréssel rendelkezik a
-				<code>http request</code> és a
-				<code>http response</code> objektumhoz és az alkalmazás
+				<code>HTTP Request</code> és a
+				<code>HTTP Response</code> objektumhoz és az alkalmazás
 				kérés-válasz ciklusában a következő
 				<code>middleware</code> függvényhez.
 			</p>

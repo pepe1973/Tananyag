@@ -2,7 +2,7 @@ let betolt_03 = `
 	<h1>Fogalmak 2</h1> 
     <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">ES6:</span> az ECMAScript 6 rövidítése, 
@@ -17,52 +17,52 @@ let betolt_03 = `
 				és a <span class="kiemel">modul</span>okat. 
 			</p>
 			<h5>Főbb tulajdonságok:</h5>
-                    <ol>
-                        <li>
-                            <b>let</b> és <b>const:</b> új változódeklarációs
-                            kulcsszavak, amelyek a hatókör (<span class="kiemel"
-                                >scope</span
-                            >) szempontjából jobb kontrollt biztosítanak a
-                            hagyományos <code>var</code>
-                            helyett.
-                        </li>
-                        <li>
-                            <b>Arrow function:</b> (nyílfüggvények) részben
-                            rövidebb szintaxist kínálnak a függvények írásához,
-                            és automatikusan kezelik a
-                            <code>this</code> kulcsszót.
-                        </li>
-                        <li>
-                            <b>Destruction: </b> (destruktúra) lehetővé teszi
-                            objektumok vagy tömbök komplex szerkezeteinek
-                            egyszerűbb részekre bontását.
-                        </li>
-                        <li>
-                            <b>Spread operator:</b> kiterjeszti a tömböt vagy
-                            objektumot elemekre vagy tulajdonságokra, például
-                            függvények argumentumaiként.
-                        </li>
-                        <li>
-                            <b>Class based inheritance: </b> JavaScriptben az
-                            osztályok bevezetésével egyszerűbbé vált az
-                            objektumorientált programozás.
-                        </li>
-                        <li>
-                            <b>Modules:</b> beépített támogatást hozott a
-                            modulokhoz, ami segít a kód szervezésében.
-                        </li>
-                        <li>
-                            <b>Promise:</b> egyszerűsíti az aszinkron műveletek
-                            kezelését.
-                        </li>
-                        <li>
-                            <b>Default parameters:</b> lehetőséget ad arra, hogy
-                            függvényparamétereknek alapértelmezett értékeket
-                            adjunk.
-                        </li>
-                    </ol>
-			</div>
-		<div class="kozep-3-kontener">
+			<ol>
+				<li>
+					<b>let</b> és <b>const:</b> új változódeklarációs
+					kulcsszavak, amelyek a hatókör (<span class="kiemel"
+						>scope</span
+					>) szempontjából jobb kontrollt biztosítanak a
+					hagyományos <code>var</code>
+					helyett.
+				</li>
+				<li>
+					<b>Arrow function:</b> (nyílfüggvények) részben
+					rövidebb szintaxist kínálnak a függvények írásához,
+					és automatikusan kezelik a
+					<code>this</code> kulcsszót.
+				</li>
+				<li>
+					<b>Destruction: </b> (destruktúra) lehetővé teszi
+					objektumok vagy tömbök komplex szerkezeteinek
+					egyszerűbb részekre bontását.
+				</li>
+				<li>
+					<b>Spread operator:</b> kiterjeszti a tömböt vagy
+					objektumot elemekre vagy tulajdonságokra, például
+					függvények argumentumaiként.
+				</li>
+				<li>
+					<b>Class based inheritance: </b> JavaScriptben az
+					osztályok bevezetésével egyszerűbbé vált az
+					objektumorientált programozás.
+				</li>
+				<li>
+					<b>Modules:</b> beépített támogatást hozott a
+					modulokhoz, ami segít a kód szervezésében.
+				</li>
+				<li>
+					<b>Promise:</b> egyszerűsíti az aszinkron műveletek
+					kezelését.
+				</li>
+				<li>
+					<b>Default parameters:</b> lehetőséget ad arra, hogy
+					függvényparamétereknek alapértelmezett értékeket
+					adjunk.
+				</li>
+			</ol>
+		</div>
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">MVC:</span>
@@ -100,7 +100,7 @@ let betolt_03 = `
 				</li>
 			</ol>
 		</div>
-		<div class="jobb-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">Dependency:</span> az
@@ -118,6 +118,36 @@ let betolt_03 = `
 				felsorolva, és automatikusan települnek a futtatásakor:
 				<code>npm install</code>.
 			</p>
+		</div>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
+				<span class="kiemel">JSON:</span> (JavaScript Object Notation) egy ember által olvasható, könnyű súlyú szöveges formátum, 
+				amelyet rendszerek közötti adatcserére használnak. Két kulcsfontosságú struktúrára épül: 
+				<span class="kiemel">kulcs-érték</span> párokra és <span class="kiemel">tömbökre</span>, és sok programnyelv képes feldolgozni. 
+				Bár eredetileg a JavaScriptből származik, nyelvfüggetlen, és általában webszerverekből 
+				weboldalakra történő adatátvitelhez használják. 
+			</p>
+			<h5>Főbb jellemzői:</h5>
+			<ol>
+				<li>
+					<b>Ember által olvasható:</b> Könnyen olvasható és írható a szoftverfejlesztők számára, 
+						ami leegyszerűsíti az adatokat érthetővé tévő folyamatokat.
+				</li>
+				<li>
+					<b>Könnyű súlyú:</b> Mivel szövegalapú, viszonylag kis méretű, ami gyors és hatékony adatátvitelt tesz lehetővé.
+				</li>
+				<li>
+					<b>Nyelvfüggetlen:</b> Annak ellenére, hogy a neve a JavaScriptre utal, a JSON szabványt számos programozási nyelv képes értelmezni és használni.
+				</li>
+				<li>
+					<b>Kulcs-érték párok és tömbök:</b> Az adatok strukturálása kulcs-érték párok és tömbök kombinációján alapul. Például:
+					<ul>
+						<li><b>Kulcs-érték:</b> { "név": "Példa", "kor": 30 }</li>
+						<li><b>Tömb:</b> ["alma", "körte", "banán"]</li>
+					</ul>
+				</li>
+			</ol>
 		</div>
 	</div>
 	`;

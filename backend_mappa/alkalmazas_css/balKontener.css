@@ -3,11 +3,11 @@
 #bal-kontener {
     background-color: var(--liZold);
     border-right: 1px solid #aaa;
-    height: 100vh;
+    height: 95vh;
     list-style-type: none;
     position: fixed;
     top: 3em;
-    width: 230px;
+    width: 240px;
 }
 
 #bal-kontener #bal-lista {

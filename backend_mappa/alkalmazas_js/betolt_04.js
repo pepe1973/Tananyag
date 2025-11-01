@@ -2,7 +2,7 @@ let betolt_04 = `
 	<h1>Fogalmak 3</h1> 
     <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">process.env:</span> a
@@ -22,7 +22,7 @@ let betolt_04 = `
 				segítségével lesz elérhető.
 			</p>
 			</div>
-		<div class="kozep-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">Version control:</span> egy
@@ -44,7 +44,7 @@ let betolt_04 = `
 				mások módosításait.
 			</p>
 		</div>
-		<div class="jobb-3-kontener">
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">Webszerver:</span> egy szoftver
@@ -80,6 +80,20 @@ let betolt_04 = `
 					biztonsági fenyegetésekkel szemben.
 				</li>
 			</ol>
+		</div>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
+				<span class="kiemel">CRUD:</span> az állandó adattárolás
+				négy alapvető funkciójának betűszava: <span class="kiemel">létrehozás</span>,
+				<span class="kiemel">olvasás</span>, <span class="kiemel">frissítés</span> 
+				és <span class="kiemel">törlés</span>. Ezek a műveletek alapvető
+				fontosságúak az alkalmazásokban és adatbázisokban lévő
+				adatok kezeléséhez, lehetővé téve a felhasználók számára
+				új rekordok hozzáadását, meglévő adatok lekérését,
+				aktuális rekordok módosítását és régi adatok
+				eltávolítását.
+			</p>
 		</div>
 	</div>
 	`;

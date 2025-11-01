@@ -2,7 +2,26 @@ let betolt_07 = `
 	<h1>Fogalmak 6</h1> 
     <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
+				<span class="kiemel">req.body:</span> egy olyan objektum a szerveroldali webfejlesztésben, 
+				amely a kérés (<span class="kiemel">request</span>) törzsében (<span class="kiemel">body</span>) küldött adatokat tartalmazza, 
+				és leggyakrabban a <span class="kiemel">POST</span>, 
+				<span class="kiemel">PUT</span> vagy <span class="kiemel">PATCH</span> metódusokkal 
+				használják. Ez az adatokat (például felhasználói adatok, űrlapbeviteli mezők) tartalmazza, 
+				amelyeket egy kliens küld a szervernek, például egy új felhasználó regisztrálásakor vagy egy meglévő erőforrás frissítésekor. 
+			</p>
+			<ol>
+				<li><b>req:</b> Ez a "request" (kérés) rövidítése, a kérést reprezentáló objektum.</li>
+				<li><b>body:</b>  Ez a kérés törzsére utal, amely azokat az adatokat tartalmazza, 
+				amelyeket a kliens elküldött a szervernek a kérés elküldésekor.</li>
+				<li><b>Példa:</b> Ha egy webalkalmazásban egy új felhasználót hozol létre egy űrlapon keresztül, 
+				akkor a felhasználó neve és e-mail címe a <span class="kiemel">req.body</span> objektumban lesz elérhető, 
+				így a szerver könnyen hozzáférhet és feldolgozhatja ezeket az adatokat, például egy adatbázisba való mentéshez.</li>
+			</ol>
+		</div>
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">View engine:</span> a nézetmotor
@@ -46,8 +65,8 @@ let betolt_07 = `
 					folyamatát.
 				</li>
 			</ol>
-			</div>
-		<div class="kozep-3-kontener">
+		</div>
+		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
 				<span class="kiemel">express.static():</span> az
@@ -69,33 +88,6 @@ let betolt_07 = `
 				csatlakoztassa az alkalmazás gyökérútvonalához az
 				<code>app.use()</code> használatával .
 			</p>
-		</div>
-		<div class="jobb-3-kontener">
-			<h3>Fogalom:</h3>
-			<p>
-				<span class="kiemel">MongoDb model:</span> a modell a
-				<span class="kiemel">MongoDB</span>-ben egy
-				adatbázis-gyűjteményt (<span class="kiemel"
-					>collection</span
-				>) képvisel, és meghatározza, milyen szerkezetű (séma
-				alapján) <span class="kiemel">dokumentum</span>okat
-				lehet abban tárolni.
-			</p>
-			<p>
-				A modell egy JavaScript-osztály, amit a
-				<span class="kiemel">Mongoose</span> a
-				<span class="kiemel">Schema</span> alapján hoz létre.
-			</p>
-			<p>
-				A modell segítségével tudunk adatokat olvasni,
-				létrehozni, frissíteni és törölni a
-				<span class="kiemel">MongoDB</span>-ben (<span
-					class="kiemel"
-					>CRUD</span
-				>
-				műveletek).
-			</p>
-			<p><b>Model = Collection + Schema + CRUD logika</b></p>
 		</div>
 	</div>
 	`;

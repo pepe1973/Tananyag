@@ -2,7 +2,7 @@ let betolt_15 = `
 	<h1>Webszerver létrehozása</h1> 
     <p>Következő lépésként létrehozzuk a <span class="kiemel">webszerver</span>ünket.</p>
 	<div class="row-3">
-		<div class="bal-3-kontener">
+		<div class="kontener">
 			<h3>Parancssor:</h3>
 			<div class="kod-kontener">
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend</span></code></p>
@@ -13,10 +13,10 @@ let betolt_15 = `
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend</span></code></p>
 				<p><code class="parancs">$ node --watch server.mjs</code></p>
 			</div>
-			</div>
-		<div class="kozep-3-kontener">
-		<h3>Visual Studio Code:</h3>
-		<p><code>server.mjs</code></p>
+		</div>
+		<div class="kontener">
+			<h3>Visual Studio Code:</h3>
+			<p><code>server.mjs</code></p>
 			<pre>
 import dotenv from 'dotenv';
 dotenv.config();
@@ -32,16 +32,14 @@ app.listen(PORT, () => {
 			</pre
 			>
 		</div>
-		<div class="jobb-3-kontener">
-		<h3>Magyarázat:</h3>
-		<p>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<p>
 				A <code>backend</code> mappában hozzunk létre egy <code>server.mjs</code> nevű állományt.
 			</p>
 			<p>
 				Ehhez adjuk ki a
-				<code
-					>touch server.mjs</code
-				>
+				<code>touch server.mjs</code>
 				utasítást a parancssorban. 
 			</p>
 			<p>Csak a <span class="kiemel">Git Bash</span> felületen működik!</p>
@@ -52,9 +50,9 @@ app.listen(PORT, () => {
 				üzemmódban.
 			</p>
 		</div>
-		<div class="jobb-3-kontener">
-		<h3>Magyarázat:</h3>
-		<ol>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<ol>
 				<li>
 					<code>import dotenv from 'dotenv';</code> -
 					importáljuk be a <code>dotenv</code> csomagot.
@@ -78,11 +76,7 @@ app.listen(PORT, () => {
 					webszervert.
 				</li>
 				<li>
-					<code
-						>app.listen(PORT, () => {
-						console.log(\`http://localhost:\${PORT}/api\`);
-						});</code
-					>
+					<code>app.listen(PORT, () => { console.log(\`http://localhost:\${PORT}/api\`); });</code>
 					- a webszerver "figyelő" (<span class="kiemel">watch</span>) módba állítása.
 				</li>
 			</ol>
