@@ -1,0 +1,56 @@
+@import url('./valtozok.css');
+@import url('./row3.css');
+
+#jobb-kontener {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    left: 240px;
+    padding: 1em;
+    position: absolute;
+    top: 3em;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+a {
+    color: var(--kek);
+}
+
+code {
+    color: var(--kek);
+    font-weight: bold;
+}
+
+pre {
+    color: var(--kek);
+    font-weight: bold;
+}
+
+.komment {
+    color: var(--zold);
+    font-weight: bold;
+}
+
+.kiemel {
+    color: var(--piros);
+}
+
+.git-lila {
+    color: var(--lila);
+}
+
+.git-sar {
+    color: var(--sarga);
+}
+
+.parancs {
+    color: var(--feher);
+}
+
+.kod-kontener {
+    background-color: var(--fekete);
+    padding: 5px;
+}

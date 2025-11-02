@@ -1,0 +1,40 @@
+@import url('./valtozok.css');
+
+#bal-kontener {
+    background-color: var(--liZold);
+    border-right: 1px solid #aaa;
+    height: 95vh;
+    list-style-type: none;
+    position: fixed;
+    top: 3em;
+    width: 240px;
+}
+
+#bal-kontener #bal-lista {
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+}
+
+#bal-kontener li {
+    background-color: var(--liZold);
+    border-bottom: 1px solid #aaa;
+    display: flex;
+}
+
+#bal-kontener li button {
+    background-color: var(--liZold);
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5em;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+}
+
+#bal-kontener .elrejt li button {
+    background-color: var(--liHalvanyZold);
+    color: black;
+}

@@ -1,0 +1,11 @@
+let betolt_00 = `
+	<h1>Bevezetés</h1> 
+    <p>Ebben a részben megismerkedünk a Python programozási nyelvvel.</p>
+	<p>Ennek folyamán a nyelvi eszközök megismerése példákon keresztül fog történni.</p>
+	<p>Ajánlott az adott sorrrendben végigmenni az anyagon, mert egymásra épül(het)nek a különböző fogalmak.</p>
+	<h5>Források:</h5>
+	<ul>
+		<li><a href="https://www.w3schools.com/python/default.asp" target="_blank">w3schools - Python</a></li>
+		<li><a href="https://pythongeeks.org/" target="_blank">PythonGeeks</a></li>
+	</ul>
+	`;
