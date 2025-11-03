@@ -1,7 +1,7 @@
 let betolt_06 = `
-	<h1>Behúzás 1</h1> 
+	<h1>Behúzás 2</h1> 
 	<h5>Feladat: </h5>
-    <p>Hozzunk létre példát a helytelen behúzásra.</p>
+    <p>Hozzunk létre példát a helytelen behúzásra. Nincs behúzás!</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>példa:</h3>
@@ -32,7 +32,7 @@ IndentationError: expected an indented block
 		</div>
 	</div>
 	<h5>Feladat: </h5>
-    <p>Hozzunk létre példát a helytelen behúzásra.</p>
+    <p>Hozzunk létre példát a helytelen behúzásra. Nem azonos behúzás egy blokkon belül!</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>példa:</h3>

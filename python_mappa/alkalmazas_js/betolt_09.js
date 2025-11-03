@@ -1,17 +1,17 @@
-let betolt_08 = `
-	<h1>Utasítás</h1> 
+let betolt_09 = `
+	<h1>Tördelés</h1> 
 	<h5>Feladat: </h5>
-    <p>Hozzunk létre példát utasításokra.</p>
+    <p>Hozzunk létre példát hosszú sorok tördelésére. Javasolt operátorok (+, -, * stb.) után törni!</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>példa:</h3>
 			<pre>
 			<code>
-<span class="komment"># Több utasítás, több sor.</span>
-print("Hello")
-print("World!")
-<span class="komment"># Több utasítás, egy sor. ; elválasztó karakterrel.</span>
-print("Hello"); print("World"); print("again!")
+<span class="komment"># Hosszú sor tördelése.</span>
+osszeg = 36 + \\
+	45 + \\
+	72
+print(f"Az összeg: {osszeg}")
 			</code>
 			</pre>
 		</div>
@@ -21,25 +21,23 @@ print("Hello"); print("World"); print("again!")
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/proba</span></code></p>
 				<p><code class="parancs">$ python main.py</code></p>
 				<pre class="parancs">
-Hello
-World!
-Hello 
-World 
-again!
+Az összeg: 153
 				</pre>
 			</div>
 		</div>
 	</div>
 	<h5>Feladat: </h5>
-    <p>Hozzunk létre példát az utasításokra hibával.</p>
+    <p>Hozzunk létre példát hosszú sorok tördelésére.</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>példa:</h3>
 			<pre>
 			<code>
-<span class="komment"># Több utasítás, egy sor. Hibával!
-# Nincs elválasztó karakter (sortörés vagy ;)!</span>
-print("Hello") print("World") print("again!")
+<span class="komment"># Hosszú sor tördelése.</span>
+mondat = "Télen húll a hó. " \\
+	"Hűvösek a nappalok. " + \\
+	"Korán nyugszik le a nap."
+print(f"A mondat: {mondat}")
 			</code>
 			</pre>
 		</div>
@@ -49,10 +47,7 @@ print("Hello") print("World") print("again!")
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/proba</span></code></p>
 				<p><code class="parancs">$ python main.py</code></p>
 				<pre class="parancs">
-  File "C:\Users\Peter\Desktop\proba\main.py", line 2
-    print("Hello") print("World") print("again!")
-                   ^
-SyntaxError: invalid syntax
+A mondat: Télen húll a hó. Hűvösek a nappalok. Korán nyugszik le a nap.
 				</pre>
 			</div>
 		</div>

@@ -27,4 +27,9 @@ let betolt_04 = `
 	mert megnehezíti az olvasást.</p>
 	<p>Ha azonban két utasítást teszel ugyanabba a sorba elválasztó karakter (sortörés vagy <code>;</code>) nélkül, 
 	a Python hibát fog dobni.</p>
+	<h5>Hosszú sorok tördelése:</h5>
+	<p>Az olvashatóság javítása érdekében általában egyetlen kódsor hosszát 79 karakterre korlátozzuk. Nézzük meg tehát, 
+	hogyan kezeljük a 79 karakternél hosszabb kódsorokat.</p>
+	<p>Egy kódsor kettéválasztásához és annak jelzéséhez, hogy a következő sor nem új sor,
+	 fordított perjelet (<span class="kiemel">backslash</span>) használunk. </p>
 	`;

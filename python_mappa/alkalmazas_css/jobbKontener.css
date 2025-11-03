@@ -20,7 +20,7 @@ a {
 }
 
 code {
-    color: var(--kek);
+    color: var(--zold);
     font-weight: bold;
 }
 
@@ -30,7 +30,7 @@ pre {
 }
 
 .komment {
-    color: var(--zold);
+    color: var(--piros);
     font-weight: bold;
 }
 

@@ -1,5 +1,5 @@
 let betolt_07 = `
-	<h1>Behúzás 1</h1> 
+	<h1>Komment</h1> 
 	<h5>Feladat: </h5>
     <p>Hozzunk létre példát az egysoros kommentekre.</p>
 	<div class="row-3">

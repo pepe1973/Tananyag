@@ -10,7 +10,7 @@ betoltTomb.push(
     betolt_06,
     betolt_07,
     betolt_08,
-    // betolt_09,
+    betolt_09,
     // betolt_10,
     // betolt_11,
     // betolt_12,
