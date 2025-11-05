@@ -31,7 +31,7 @@ const cakeSchema = new mongoose.Schema(
             require: true,
         },
         leiras: {
-            type: Number,
+            type: String,
             require: true,
         },
         kepek: [
