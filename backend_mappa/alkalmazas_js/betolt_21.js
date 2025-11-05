@@ -16,6 +16,7 @@ let betolt_21 = `
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
+			<div class="keret">
 			<code>mainRoutesBackend.mjs</code>
 			<pre>
 import express from 'express';
@@ -26,6 +27,7 @@ router.get('/', getMain);</span>
 
 export default router;
 			</pre>
+			</div><div class="keret">
 			<p><code>server.mjs</code></p>
 			<pre>
 import dotenv from 'dotenv';
@@ -69,6 +71,7 @@ app.use((req, res) => {
     }
 });</span>
 			</pre>
+			</div>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>

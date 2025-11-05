@@ -48,7 +48,7 @@ let betolt_32 = `
             window.alert(valasz.msg);
             window.location.href = '/api/cakes-backend';
         } else {
-            window.alert(valasz.msg);
+            window.alert(vissza.msg);
         }
     } catch (error) {
         console.log(error.message);

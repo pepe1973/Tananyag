@@ -1,6 +1,6 @@
-let betolt_32 = `
-	<h1>A <code>public/js</code> mappában lévő <code>torta.mjs</code> állomány szerkesztése.</h1> 
-    <p>Ebben a lépésben kidolgozzuk a <code>feltoltes(event)</code> függvényt a <code>public/jd/torta.mjs</code> állományban.</p>
+let betolt_27 = `
+	<h1>A <code>public/js</code> mappában lévő <code>tortak.mjs</code> állomány szerkesztése</h1> 
+    <p>Ebben a lépésben kidolgozzuk a <code>torol(id)</code> függvényt a <code>public/jd/tortak.mjs</code> állományban.</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>Parancssor:</h3>
@@ -16,39 +16,29 @@ let betolt_32 = `
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/public</span></code></p>
 				<p><code class="parancs">$ cd js</code></p>
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/public/js</span></code></p>				
-				<p><code class="parancs">$ touch torta.mjs</code></p>
+				<p><code class="parancs">$ touch tortak.mjs</code></p>
 			</div>
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<p><code>torta.mjs</code></p>
+			<p><code>tortak.mjs</code></p>
 			<pre>
-<span class="kiemel">async function feltoltes(event) {
-    event.preventDefault();</span>
-
+<span class="kiemel">async function torol(id) {</span>
     try {
-        let nev = document.querySelector('#nev').value;
-        let ar = document.querySelector('#ar').value;
-        let leiras = document.querySelector('#leiras').value;
-        let kep1 = document.querySelector('#kep1').value;
-        let kep2 = document.querySelector('#kep2').value;
-        let kep3 = document.querySelector('#kep3').value;
-
-        const response = await fetch('/api/new-cake', {
-            method: 'POST',
+        <span class="kiemel">const response = await fetch(\`/api/cakes-backend/\${id}\`, {
+            method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
             },
-            <span class="kiemel">body: JSON.stringify({ nev, ar, leiras, kep1, kep2, kep3 }),</span>
         });
 
-        const valasz = await response.json();
+        const vissza = await response.json();</span>
 
         if (response.ok) {
-            window.alert(valasz.msg);
-            window.location.href = '/api/cakes-backend';
+            window.alert(vissza.msg);
+            <span class="kiemel">window.location.href = '/api/cakes-backend';</span>
         } else {
-            window.alert(valasz.msg);
+            window.alert(vissza.msg);
         }
     } catch (error) {
         console.log(error.message);
@@ -91,11 +81,11 @@ let betolt_32 = `
 				utasítást a parancssorban. 
 			</p>
 			<p>
-				A <code>js</code> mappában hozzunk létre egy <code>torta.mjs</code> nevű állományt.
+				A <code>js</code> mappában hozzunk létre egy <code>tortak.mjs</code> nevű állományt.
 			</p>
 			<p>
 				Ehhez adjuk ki a
-				<code>touch torta.mjs</code>
+				<code>touch tortak.mjs</code>
 				utasítást a parancssorban. 
 			</p>
 			<p>Csak a <span class="kiemel">Git Bash</span> felületen működik!</p>
@@ -103,13 +93,19 @@ let betolt_32 = `
 		<div class="kontener">
 			<h3>Magyarázat:</h3>
 			<ol>
-				<li><code>async function feltoltes(event) {}</code> - hozzunk létre egy aszinkron <code>feltoltes</code> nevű függvényt.
+				<li><code>async function torol(id) {}</code> - hozzunk létre egy aszinkron <code>torol</code> nevű függvényt.
 				<li>
-					<code>event.preventDefault();</code> - ne engedjük a böngészőt frissülni az adatok elküldése után.
+					<code>const response = </code> - egy <code>response</code> nevű <span class="kiemel">promise</span> létrehozása.
 				</li>
 				<li>
-					<code>body: JSON.stringify({ nev, ar, leiras, kep1, kep2, kep3 })</code> - a
-					csomagoljuk be a <code>body</code> tartalmát <span class="kiemel">JSON</span> formátumú sztringbe.
+					<code>await fetch();</code> - a
+					<span class="kiemel">promise</span>.
+				</li>
+				<li>
+					<code>const vissza = await response.json();</code> - csomagoljuk ki a webszerver válaszát.
+				</li>
+				<li>
+					<code>window.location.href = '/api/cakes-backend';</code> - kérjük le újra az összes tortát.
 				</li>
 			</ol>
 		</div>

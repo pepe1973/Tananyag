@@ -6,43 +6,42 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=expand_circle_down" />
     <link rel="stylesheet" href="./stilus.css" />
 	<link rel="shortcut icon" href="./logo.png" type="image/x-icon">
-	<title>Python programozás tananyag</title>
+	<title>Frontend programozás tananyag</title>
 </head>
 <body onload="alap_betolt()">
 	<div id="title-kontener">
-        <a href="../index.html">Python Programozás</a>
+        <a href="../index.html">Frontend Programozás</a>
     </div>
 	<div id="main-kontener">
 		<div id="bal-kontener">
 			<div id="bal-lista">
-				<li><button class="marad nyit" onclick="betolt(0, 'igen')">Bevezetés</button></li>
-				<li><button class="marad nyit" onclick="betolt(1, 'igen')">Történelem és leírás</button></li>
-				<li>
-                    <button class="marad" onclick="kinyit(0, 2, 0)">Fogalmak</button>
-                    <span class="material-symbols-outlined" onclick="kinyit(0, 2, 0)">expand_circle_down</span>
+				<li><button class="marad nyit" onclick="betolt(0, 0, 'igen')">Bevezetés</button></li>
+				 <li>
+                    <button class="marad" onclick="kinyit(0, 1, 0)">Fogalmak</button>
+                    <span class="material-symbols-outlined" onclick="kinyit(0, 1, 0)">expand_circle_down</span>
                 </li>
 				<div class="elrejt">
-					<li><button class="rejt nyit" onclick="betolt(2, 'nem')">Összefoglaló</button></li>
-					<li><button class="rejt nyit" onclick="betolt(3, 'nem')">Fogalmak 1</button></li>
-					<!-- <li><button class="rejt nyit" onclick="betolt(3, 'nem')">Fogalmak 2</button></li>
+					<!-- <li><button class="rejt nyit" onclick="betolt(1, 'nem')">Összefoglaló</button></li>
+					<li><button class="rejt nyit" onclick="betolt(2, 'nem')">Fogalmak 1</button></li>
+					<li><button class="rejt nyit" onclick="betolt(3, 'nem')">Fogalmak 2</button></li>
 					<li><button class="rejt nyit" onclick="betolt(4, 'nem')">Fogalmak 3</button></li>
 					<li><button class="rejt nyit" onclick="betolt(5, 'nem')">Fogalmak 4</button></li>
 					<li><button class="rejt nyit" onclick="betolt(6, 'nem')">Fogalmak 5</button></li>
 					<li><button class="rejt nyit" onclick="betolt(7, 'nem')">Fogalmak 6</button></li>
 					<li><button class="rejt nyit" onclick="betolt(8, 'nem')">Fogalmak 7</button></li> -->
-				</div>
+				</div> 
 				<li>
-                    <button class="marad" onclick="kinyit(1, 4, 2)">Szintaxis</button>
-                    <span class="material-symbols-outlined" onclick="kinyit(1, 4, 2)">expand_circle_down</span>
+                    <button class="marad" onclick="kinyit(1, 9, 0)">React alkalmazás alapbeállítás</button>
+                    <span class="material-symbols-outlined" onclick="kinyit(1, 9, 0)">expand_circle_down</span>
                 </li>
 				<div class="elrejt">
-					<li><button class="rejt nyit" onclick="betolt(4, 'nem')">Összefoglaló</button></li>
-					<li><button class="rejt nyit" onclick="betolt(5, 'nem')">Behúzás 1</button></li>
-					<li><button class="rejt nyit" onclick="betolt(6, 'nem')">Behúzás 2</button></li>
-					<li><button class="rejt nyit" onclick="betolt(7, 'nem')">Komment</button></li>
-					<li><button class="rejt nyit" onclick="betolt(8, 'nem')">Utasítás, kódcsomag</button></li>
-					<li><button class="rejt nyit" onclick="betolt(9, 'nem')">Tördelés</button></li>
-					<!-- <li><button class="rejt nyit" onclick="betolt(15, 'nem')">Lépés 6</button></li> -->
+					<li><button class="rejt nyit" onclick="betolt(1, 9, 'nem')">Összefoglaló</button></li>
+					<li><button class="rejt nyit" onclick="betolt(2, 10, 'nem')">Lépés 1</button></li>
+					<li><button class="rejt nyit" onclick="betolt(3, 11, 'nem')">Lépés 2</button></li>
+					<li><button class="rejt nyit" onclick="betolt(4, 12, 'nem')">Lépés 3</button></li>
+					<!-- <li><button class="rejt nyit" onclick="betolt(13, 'nem')">Lépés 4</button></li>
+					<li><button class="rejt nyit" onclick="betolt(14, 'nem')">Lépés 5</button></li>
+					<li><button class="rejt nyit" onclick="betolt(15, 'nem')">Lépés 6</button></li> -->
 				</div>
 				<!-- <li><button class="marad nyit" onclick="betolt(16, 'igen')">MongoDb csatlakozás</button></li>
 				<li><button class="marad nyit" onclick="betolt(17, 'igen')">Cloudinary beállítása</button></li>
@@ -95,7 +94,7 @@
 		</div>
 		<div id="jobb-kontener"></div>
 	</div>
-	<!-- <script src="./alkalmazas_js/betolt_38.js"></script>
+	<script src="./alkalmazas_js/betolt_38.js"></script>
 	<script src="./alkalmazas_js/betolt_37.js"></script>
 	<script src="./alkalmazas_js/betolt_36.js"></script>
 	<script src="./alkalmazas_js/betolt_35.js"></script>
@@ -123,14 +122,14 @@
 	<script src="./alkalmazas_js/betolt_13.js"></script>
 	<script src="./alkalmazas_js/betolt_12.js"></script>
 	<script src="./alkalmazas_js/betolt_11.js"></script>
-	<script src="./alkalmazas_js/betolt_10.js"></script> -->
-	<script src="./alkalmazas_js/betolt_09.js"></script> 
-	<script src="./alkalmazas_js/betolt_08.js"></script> 
-	<script src="./alkalmazas_js/betolt_07.js"></script> 
-	<script src="./alkalmazas_js/betolt_06.js"></script> 
-	<script src="./alkalmazas_js/betolt_05.js"></script> 
-	<script src="./alkalmazas_js/betolt_04.js"></script> 
-	<script src="./alkalmazas_js/betolt_03.js"></script>  
+	<script src="./alkalmazas_js/betolt_10.js"></script>
+	<script src="./alkalmazas_js/betolt_09.js"></script>
+	<script src="./alkalmazas_js/betolt_08.js"></script>
+	<script src="./alkalmazas_js/betolt_07.js"></script>
+	<script src="./alkalmazas_js/betolt_06.js"></script>
+	<script src="./alkalmazas_js/betolt_05.js"></script>
+	<script src="./alkalmazas_js/betolt_04.js"></script>
+	<script src="./alkalmazas_js/betolt_03.js"></script>
 	<script src="./alkalmazas_js/betolt_02.js"></script>
 	<script src="./alkalmazas_js/betolt_01.js"></script>
 	<script src="./alkalmazas_js/betolt_00.js"></script>

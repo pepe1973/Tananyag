@@ -1,5 +1,5 @@
-let betolt_38 = `
-	<h1>A <code>routes/cakes</code> mappában lévő <code>oneCakeRoutesBackend.mjs</code> állomány szerkesztése</h1> 
+let betolt_33 = `
+	<h1>A <code>routes/cakes</code> mappában lévő <code>newCakeRoutes.mjs</code> állomány szerkesztése</h1> 
     <p>Ebben a lépésben az <span class="kiemel">MVC</span>-vel összefüggésben létrehozzuk a fenti állományt. Ebben fogjuk össze 
 	a <span class="kiemel">CRUD</span> műveleteket.</p>
 	<div class="row-3">
@@ -15,23 +15,23 @@ let betolt_38 = `
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/routes</span></code></p>
 				<p><code class="parancs">$ cd cakes</code></p>
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/routes/cakes</span></code></p>
-				<p><code class="parancs">$ touch oneCakeRoutesBackend.mjs</code></p>
+				<p><code class="parancs">$ touch newCakeRoutes.mjs</code></p>
 			</div>
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<div class="keret">
-			<code>oneCakeRoutesBackend.mjs</code>
+			<code>newCakeRoutes.mjs</code>
 			<pre>
 import express from 'express';
-<span class="kiemel">import { updateOneCakeBackend } from '../../controllers/cakes/oneCakeControllersBackend.mjs';</span>
+<span class="kiemel">import pictureUploader from '../../middlewares/pictureToCloudinary.mjs';
+import { getNewCake, postNewCake } from '../../controllers/cakes/newCakeControllers.mjs';</span>
 const router = express.Router();
 
-<span class="kiemel">router.put('/', updateOneCakeBackend);</span>
+<span class="kiemel">router.get('/', getNewCake);
+router.post('/', pictureUploader, postNewCake);</span>
 
 export default router;
 			</pre>
-			</div><div class="keret">
 			<code>server.mjs</code>
 			<pre>
 import dotenv from 'dotenv';
@@ -68,11 +68,8 @@ app.use('/api', mainRouter);
 import cakesRouter from './routes/cakes/cakesRoutesBackend.mjs';
 app.use('/api/cakes-backend', cakesRouter);
 
-import newCakeRouter from './routes/cakes/newCakeRoutes.mjs';
-app.use('/api/new-cake', newCakeRouter);
-
-<span class="kiemel">import oneCakeRouter from './routes/cakes/oneCakeRoutesBackend.mjs';
-app.use('/api/one-cake-backend', oneCakeRouter);</span>
+<span class="kiemel">import newCakeRouter from './routes/cakes/newCakeRoutes.mjs';
+app.use('/api/new-cake', newCakeRouter);</span>
 
 app.use((req, res) => {
     try {
@@ -85,7 +82,6 @@ app.use((req, res) => {
 });
 
 			</pre>
-			</div>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>
@@ -114,11 +110,11 @@ app.use((req, res) => {
 				utasítást a parancssorban. 
 			</p>
 			<p>
-				A <code>cakes</code> mappában hozzunk létre egy <code>oneCakeRoutesBackend.mjs</code> nevű állományt.
+				A <code>cakes</code> mappában hozzunk létre egy <code>newCakeRoutes.mjs</code> nevű állományt.
 			</p>
 			<p>
 				Ehhez adjuk ki a
-				<code>touch oneCakeRoutesBackend.mjs</code>
+				<code>touch newCakeRoutes.mjs</code>
 				utasítást a parancssorban. 
 			</p>
 			<p>Csak a <span class="kiemel">Git Bash</span> felületen működik!</p>
@@ -126,32 +122,40 @@ app.use((req, res) => {
 		<div class="kontener">
 			<h3>Magyarázat:</h3>
 			<p>
-				A <code>oneCakeRoutesBackend.mjs</code> állomány
+				A <code>newCakeRoutes.mjs</code> állomány
 				szerkesztése.
 			</p>
 			<ol>
+				<li><code>import pictureUploader from '../../middlewares/pictureToCloudinary.mjs';</code> - 
+				a <code>pictureUploader</code> <span class="kiemel">middleware</span> meghívása az adott állományból</li>
 				<li>
-					<code>import { updateOneCakeBackend } from '../../controllers/cakes/oneCakeControllersBackend.mjs';</code>
-					- hívjuk meg a <code>updateOneCakeBackend</code> függvényt a megfelelő állományból.
+					<code>import { getNewCake, postNewCake } from '../../controllers/cakes/newCakeControllers.mjs';</code>
+					- hívjuk meg a <code>getNewCake</code> és <code>postNewCake</code> 
+					függvényeket a megfelelő állományból.
 				</li>
 				<li>
-					<code>router.put('/', updateOneCakeBackend);</code> -
-					a <code>HTTP PUT</code> metódus (<span class="kiemel">CRUD Update</span>) művelet megvalósítása a
-					<code>updateOneCakeBackend</code> függvénnyel.
+					<code>router.get('/', getNewCake);</code> -
+					a <code>HTTP GET</code> metódus (<span class="kiemel">CRUD Read</span>) művelet megvalósítása a
+					<code>getNewCake</code> függvénnyel.
+				</li>
+				<li>
+					<code>router.post('/', pictureUploader, postNewCake);</code> -
+					a <code>HTTP POST</code> metódus (<span class="kiemel">CRUD Create</span>) művelet megvalósítása a
+					<code>postNewCake</code> függvénnyel.
 				</li>
 			</ol>
 			<p>Módosítások a <code>server.mjs</code> állományban.</p>
 			<ol>
 				<li>
-					<code>import oneCakeRouter from './routes/cakes/oneCakeRoutesBackend.mjs';</code>
+					<code>import newCakeRouter from './routes/cakes/newCakeRoutes.mjs';</code>
 					- importáljuk be az előbb létrehozott
 					<code>router</code>-t a megfelelő állományból.
 				</li>
 				<li>
-					<code>app.use('/api/one-cake-backend', oneCakeRouter);</code> - a
+					<code>app.use('/api/new-cake', newCakeRouter);</code> - a
 					<code>use</code>
 					<span class="kiemel">middleware</span> segítségével
-					dolgozzuk ki a <code>/api/one-cake-backend</code> -
+					dolgozzuk ki a <code>/api/new-cake</code> -
 					<span class="kiemel">route</span>-ot.
 				</li>
 			</ol>

@@ -14,7 +14,6 @@ let betolt_16 = `
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<div class="keret">
 			<p><code>dbConnection.mjs</code></p>
 			<pre>
 import mongoose from 'mongoose';
@@ -26,8 +25,7 @@ const dbConnect = async () => {
 
 export default dbConnect;
 			</pre
-			></div>
-			<div class="keret">
+			>
 			<h5><code>server.mjs</code></h5>
 			<pre>
 import dotenv from 'dotenv';
@@ -50,7 +48,7 @@ const app = express();
     .catch((error) => {
         console.error(\`A hiba oka: \${error.message}\`);
     });</span> 
-			</pre></div>
+			</pre>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>

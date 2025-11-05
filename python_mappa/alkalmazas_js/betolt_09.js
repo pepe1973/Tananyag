@@ -35,7 +35,7 @@ Az összeg: 153
 			<code>
 <span class="komment"># Hosszú sor tördelése.</span>
 mondat = "Télen húll a hó. " \\
-	"Hűvösek a nappalok. " + \\
+	"Hűvösek a nappalok. " \\
 	"Korán nyugszik le a nap."
 print(f"A mondat: {mondat}")
 			</code>

@@ -27,6 +27,15 @@ let betolt_04 = `
 	mert megnehezíti az olvasást.</p>
 	<p>Ha azonban két utasítást teszel ugyanabba a sorba elválasztó karakter (sortörés vagy <code>;</code>) nélkül, 
 	a Python hibát fog dobni.</p>
+	<h5>Kódcsomag (suite):</h5>
+	<p>A Pythonban a kódcsomag egy olyan kódblokk, amely egy vagy több utasításból áll. 
+	Kapcsolódó utasítások csoportosítására szolgál, és jellemzően függvények, 
+	osztályok és vezérlőstruktúrák definiálásakor használják.</p>
+	<p>Egy kódcsomag jellemzően behúzott, azaz minden sora azonos mértékben van behúzva. 
+	A behúzás azt jelzi, hogy a mondatcsomagban lévő utasítások összetartoznak, 
+	és egyetlen blokkként kell kezelni őket.</p>
+	<p>A kódcsomag előtt jellemzően van egy fejlécsor (<span class="kiemel">header line</span>), 
+	amelyet <code>:</code> zár.</p>
 	<h5>Hosszú sorok tördelése:</h5>
 	<p>Az olvashatóság javítása érdekében általában egyetlen kódsor hosszát 79 karakterre korlátozzuk. Nézzük meg tehát, 
 	hogyan kezeljük a 79 karakternél hosszabb kódsorokat.</p>

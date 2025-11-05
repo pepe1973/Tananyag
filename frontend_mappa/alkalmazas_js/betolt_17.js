@@ -16,7 +16,6 @@ let betolt_17 = `
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<div class="keret">
 			<code>pictureToCloudinary.mjs</code>
 			<pre>
 import dotenv from 'dotenv';
@@ -46,8 +45,6 @@ const pictureUploader = async (req, res, next) => {
 export default pictureUploader;
 			</pre
 			>
-			</div>
-			<div class="keret">
 			<code>pictureDeleteFromCloudinary.mjs</code>
 			<pre>
 import dotenv from 'dotenv';
@@ -77,7 +74,6 @@ const pictureDeleter = async (req, res, next) => {
 
 export default pictureDeleter;
 			</pre>
-			</div>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>

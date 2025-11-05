@@ -19,7 +19,6 @@ let betolt_31 = `
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<div class="keret">
 			<p><code>nav.ejs</code></p>
 			<pre>
 &lt;style&gt;
@@ -57,7 +56,6 @@ let betolt_31 = `
 &lt;/nav&gt;
 			</pre
 			>
-			</div><div class="keret">
 			<p><code>new-cake.ejs</code></p>
 			<pre>
 &lt;!DOCTYPE html&gt;
@@ -109,7 +107,6 @@ let betolt_31 = `
     &lt;/body&gt;
 &lt;/html&gt;
 			</pre>
-			</div>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>

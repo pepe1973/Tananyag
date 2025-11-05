@@ -20,7 +20,6 @@ let betolt_38 = `
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<div class="keret">
 			<code>oneCakeRoutesBackend.mjs</code>
 			<pre>
 import express from 'express';
@@ -31,7 +30,6 @@ const router = express.Router();
 
 export default router;
 			</pre>
-			</div><div class="keret">
 			<code>server.mjs</code>
 			<pre>
 import dotenv from 'dotenv';
@@ -85,7 +83,6 @@ app.use((req, res) => {
 });
 
 			</pre>
-			</div>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>
