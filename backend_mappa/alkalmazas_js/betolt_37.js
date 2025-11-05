@@ -46,7 +46,7 @@ async function feltoltes(event) {
             window.alert(valasz.msg);
             window.location.href = '/api/cakes-backend';
         } else {
-            window.alert(vissza.msg);
+            window.alert(valasz.msg);
         }
     } catch (error) {
         console.log(error.message);
