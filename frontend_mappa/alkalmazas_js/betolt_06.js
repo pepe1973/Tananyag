@@ -5,122 +5,53 @@ let betolt_06 = `
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">Endpoint:</span> a
-				<span class="kiemel">végpont</span>ok olyan fizikai
-				eszközök, amelyek számítógép-hálózathoz csatlakoznak, és
-				információkat cserélnek velük. Néhány példa a
-				végpontokra: mobileszközök, asztali számítógépek,
-				virtuális gépek, beágyazott eszközök és kiszolgálók.
+				<span class="kiemel">useMemo():</span> egy <span class="kiemel">React hook</span>, ami a teljesítmény
+				optimalizálására szolgál a <span class="kiemel">memoizáció</span> (azaz egy érték "gyorsítótárazása" vagy
+				"megjegyzése") révén. Ez azt jelenti, hogy ha egy drága számítás eredménye nem változik,
+				azt a <span class="kiemel">hook</span> megjegyzi, és nem számolja újra minden újrarajzoláskor,
+				ami gyorsíthatja az alkalmazást.
 			</p>
-			<p>
-				<span class="kiemel">Socket:</span> egy kétirányú
-				kommunikációs kapcsolat végpontja, amely két program
-				közötti adott kapcsolatot képvisel. A végpont (endpoint)
-				egy tágabb fogalom, amely utalhat egy socketre (IP-cím
-				és portszám által meghatározott) vagy egy fizikai
-				eszközre, például egy számítógépre vagy szerverre.
-				Hálózatépítésben a végpont egy IP-cím és egy portszám
-				kombinációja, míg a socket egy szoftverobjektum, amelyet
-				az alkalmazások az adatok küldésére és fogadására
-				használnak az adott végponton keresztül.
-			</p>
-			<h5>Példák:</h5>
-			<p><code>127.0.0.1:3500</code> - ez socket</p>
-			<p><code>http://127.0.0.1:3500/</code> - ez endpoint</p>
-			<p>
-				<code>http://localhost:3500/cakes</code> - ez is
-				endpoint
-			</p>
-			</div>
-		<div class="kontener">
-			<h3>Fogalom:</h3>
-			<p>
-				<span class="kiemel">Route:</span> egy olyan leképezés,
-				amely a felhasználó böngészőkérését (egy adott URL
-				alapján) a megfelelő kódhoz vagy oldalhoz irányítja a
-				megjelenítéshez.
-			</p>
-			<p>
-				Ez egy alapvető része annak , hogyan navigál egy webes
-				alkalmazás, és meghatározza, hogy milyen tartalmat,
-				funkciót vagy erőforrást jelenítsen meg, amikor a
-				felhasználó meglátogat egy adott webcímet.
-			</p>
-			<h5>Hogyan működik:</h5>
+			<h5>Főbb tulajdonságok:</h5>
 			<ol>
 				<li>
-					<b>Request (kérés):</b> A felhasználó beír egy
-					URL-címet, például https://example.com/about, vagy
-					rákattint egy hivatkozásra.
+					<b>Működése:</b>A <span class="kiemel">useMemo</span> megkap egy függvényt, ami a kiszámítandó értéket
+					állítja elő, valamint egy függőségi tömböt. Amíg a tömbben lévő értékek nem változnak,
+					a <span class="kiemel">hook</span> az utoljára kiszámított értéket adja vissza.
 				</li>
 				<li>
-					<b>Routing (útvonaltervezés):</b> A webszerver vagy
-					a kliensoldali alkalmazás ellenőrzi az
-					útvonalszabályait, hogy egyezést találjon az
-					URL-címmel.
+					<b>Mikor használd:</b> Csak akkor használd, ha a számítás valósan költséges és lassú,
+					és a komponens gyakran újrarajzolódik.
 				</li>
 				<li>
-					<b>Handler (kezelő):</b> Miután egyezést talált, az
-					útvonal egy adott kezelőhöz irányítja a kérést. Ez a
-					kezelő lehet:
-					<ul>
-						<li>
-							Egy fizikai fájl (például egy .html vagy egy
-							.ejs fájl).
-						</li>
-						<li>
-							Egy függvény vagy osztály, amely feldolgozza
-							a kérést és létrehozza a tartalmat.
-						</li>
-					</ul>
-				</li>
-				<li>
-					<b>Response (válasz):</b> A kezelő végrehajtja a
-					kérést, és a szerver vagy alkalmazás visszaküldi a
-					kért tartalmat a felhasználó böngészőjének.
+					<b>Használata:</b> A szintaxis: <code>const memoizáltÉrték = useMemo(() => funkció(), [függőségek])</code>. 
 				</li>
 			</ol>
+			<p><a href="https://www.w3schools.com/react/react_usememo.asp" target="_blank">w3schools: useMemo()</a></p>
 		</div>
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">Request params:</span> kérés paraméterek lehetővé teszik az adatok átadását egy API-végpontnak kérés kezdeményezésekor. 
-				Fontos részét képezik a REST API-k tervezésének és használatának. 
+				<span class="kiemel">CORS (Cross-Origin Resource Sharing):</span> egy webbiztonsági mechanizmus,
+				amely lehetővé teszi, hogy egy weboldal szkriptjei biztonságosan kérjenek erőforrásokat egy másik domainről.
+				Ezt a böngészőoldali szabályozást a szerverek "hívják meg" HTTP fejlécekkel, lehetővé téve a különféle,
+				azonosítatlan eredetű erőforrások, például API-k, betűkészletek vagy adatok biztonságos elérését.
 			</p>
-			<p>
-				A <span class="kiemel">request params</span>, más néven <span class="kiemel">query params</span> (lekérdezési paraméterek)
-				vagy <span class="kiemel">URL params</span> (URL-paraméterek), kulcs-érték párok, 
-				amelyeket a rendszer hozzáfűz az URL-hez HTTP-kérés kezdeményezésekor. 
-				A paraméterek láthatók az URL-ben, és lehetővé teszik a kliens számára, 
-				hogy egyszerű és szabványosított módon továbbítson adatokat az API-nak.
-			</p>
-			<h5>Típusok:</h5>
+			<h5>Főbb tulajdonságok:</h5>
 			<ol>
-				<li><b>Query Parameters:</b> a lekérdezési paraméterek a leggyakoribb típusok. 
-				Ezeket egy <code>?</code> karakter után fűzzük hozzá az URL-útvonalhoz:
-				<p><code>/users?page=1&per_page=20</code></p>
+				<li>
+					<b>Hogyan működik:</b> Ha egy weboldal (pl. <span class="kiemel">a.com</span>) egy másik
+					domainről (<span class="kiemel">b.com</span>) szeretne lekérni adatot, a böngésző a szerverrel kommunikál
+					annak érdekében, hogy eldöntse, engedélyezett-e ez a kérés.
 				</li>
-			</ol>
-			<ol>
-				<li><b>Path Parameters:</b> Az elérési út paraméterei beépülnek magába az URL elérési útjába:
-				<p><code>/users/{userId}</code></p>
+				<li>
+					<b>Célja:</b> A <span class="kiemel">Same-Origin Policy</span> nevű alapvető böngészőbiztonsági funkció
+					kiterjesztése és rugalmasabbá tétele, amely alapvetően megakadályozza a weboldalak
+					közötti adatátvitelt a biztonság érdekében.
 				</li>
-			</ol>
-		</div>
-		<div class="kontener">
-			<h3>Fogalom:</h3>
-			<p>
-				<span class="kiemel">req.params:</span> egy objektum, amely tartalmazza az URL-útvonalból kinyert paramétereket, 
-				például a <code>/user/:name</code> útvonalban a <code>:name</code>-hez tartozó értéket. 
-				Ez segít a szervernek megérteni a kérés specifikus részleteit, lehetővé téve az adatok kinyerését közvetlenül az 
-				<span class="kiemel">URL</span>-ből. 
-			</p>
-			<ol>
-				<li><b>Hogyan működik:</b> Ha egy útvonalat a <code>user/:name</code> formában definiálsz, 
-				a <code>req.params.name</code> hozzáférhet a felhasználó nevéhez az <span class="kiemel">URL</span>-ből.</li>
-				<li><b>Szerepe:</b> A <span class="kiemel">req.params</span> objektum segít az azonosításon alapuló lekérések megvalósításában, 
-				például egy adott felhasználó profiljának lekérdezésében.</li>
-				<li><b>Példa:</b> Egy <code>GET /user/123</code> kérés esetén a <code>req.params.id</code> értéke 123 lenne. </li>
+				<li>
+					<b>Miért fontos:</b> Alapvető fontosságú a modern, összetett webalkalmazások számára, amelyek gyakran
+					külső API-kat, harmadik féltől származó szolgáltatásokat vagy más erőforrásokat használnak.
+				</li>
 			</ol>
 		</div>
 	</div>

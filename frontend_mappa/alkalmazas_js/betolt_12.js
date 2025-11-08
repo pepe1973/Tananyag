@@ -1,6 +1,6 @@
 let betolt_12 = `
-	<h1>Mappastruktúra kialakítása. Létrehozás</h1> 
-    <p>Ebben a részben tovább alakítjuk a mappastruktúrát. Hozzáadunk mappákat és állományokat.</p>
+	<h1>Mappastruktúra kialakítása. <code>components</code> mappa létrehozása</h1> 
+    <p>Ebben a részben tovább alakítjuk a mappastruktúrát. Létrehozzuk a <code>components</code> mappát.</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>Parancssor:</h3>
@@ -29,29 +29,37 @@ let betolt_12 = `
 				<p><code class="parancs">$ cd ..</code></p>
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/components</span></code></p>
 				<p><code class="parancs">$ cd ..</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src</span></code></p>
-				<p><code class="parancs">$ cd pages</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/pages</span></code></p>
-				<p><code class="parancs">$ mkdir Home Cakes</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/pages</span></code></p>
-				<p><code class="parancs">$ cd Home</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/pages/Home</span></code></p>
-				<p><code class="parancs">$ touch Home.jsx Home.css</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/pages/Home</span></code></p>
-				<p><code class="parancs">$ cd ..</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/pages</span></code></p>
-				<p><code class="parancs">$ cd Cakes</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/pages/Cakes</span></code></p>
-				<p><code class="parancs">$ touch Cakes.jsx Cakes.css</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/pages/Cakes</span></code></p>
-				<p><code class="parancs">$ cd ..</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src/pages</span></code></p>
-				<p><code class="parancs">$ cd ..</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend/src</span></code></p>
-				<p><code class="parancs">$ cd ..</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend</span></code></p>
-				<p><code class="parancs">$ </code></p>
 			</div>
+		</div>
+		<div class="kontener">
+			<h3>Visual Studio Code:</h3>
+			<div class="keret">
+			<p><code>Navbar.jsx</code></p>
+			<pre>
+<span class="kiemel">import './Navbar.css';
+
+const Navbar = () => {
+    return &lt;div className='navbar-kontener'&gt;Navbar&lt;/div&gt;
+};
+
+export default Navbar;</span>
+			</pre
+			>
+			</div>
+			<div class="keret">
+			<p><code>Cake.jsx</code></p>
+			<pre>
+import './Cake.css';
+
+const Cake = () => {
+    return &lt;div className='cake-kontener'&gt;Cake&lt;/div&gt;
+};
+
+export default Cake;
+			</pre
+			>
+			</div>
+			<p>A <code>css</code>-állományok stílusadása egyedi.</p>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>
@@ -98,6 +106,53 @@ let betolt_12 = `
 			Ehhez adjuk ki az <code>touch Navbar.jsx Navbar.css</code> utasítást a parancssorban.
 			</p>
 			<p>Csak a <span class="kiemel">Git Bash</span> felületen működik!</p>
+			<p>
+				Lépjünk ki a <code>Navbar</code> mappából.
+			</p>
+			<p>
+				Ehhez adjuk ki az <code>cd ..</code> utasítást a parancssorban.
+			</p>
+			<p>
+			Lépjünk be a <code>Cake</code> mappába.
+			</p>
+			<p>
+				Ehhez adjuk ki az <code>cd Cake</code> utasítást a parancssorban.
+			</p>
+			<p>
+			Hozzuk létre a <code>Cake.jsx</code> és <code>Cake.css</code> állományokat.
+			</p>
+			<p>
+			Ehhez adjuk ki az <code>touch Cake.jsx Cake.css</code> utasítást a parancssorban.
+			</p>
+			<p>Csak a <span class="kiemel">Git Bash</span> felületen működik!</p>
+			<p>
+				Lépjünk ki a <code>Cake</code> mappából.
+			</p>
+			<p>
+				Ehhez adjuk ki az <code>cd ..</code> utasítást a parancssorban.
+			</p>
+			<p>
+				Lépjünk ki a <code>components</code> mappából.
+			</p>
+			<p>
+				Ehhez adjuk ki az <code>cd ..</code> utasítást a parancssorban.
+			</p>
+		</div>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<ol>
+				<li>
+					<code>import './Navbar.css';</code> - importáljuk be a <code>Navbar.css</code> állományt.
+				</li>
+				<li>
+					<code>const Navbar = () => {}</code> - hozzunk létre egy függvényt.
+				</li>
+				<li>
+					<code>return &lt;div className='cake-kontener'&gt;Cake&lt;/div&gt;</code> - amely visszatér a <code>Navbar</code>
+					komponenssel.
+				</li>
+				<li><code>export default Navbar;</code> - vigyük ki alapértelmezetten ezt a függvényt.</li>
+			</ol>
 		</div>
 	</div>
 	`;

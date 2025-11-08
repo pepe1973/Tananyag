@@ -1,152 +1,109 @@
 let betolt_03 = `
 	<h1>Fogalmak 2</h1> 
-    <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
+    <p>Ebben a részben megismerkedünk a frontend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">ES6:</span> az ECMAScript 6 rövidítése, 
-				ami a JavaScript 2015-ben kiadott hatodik, 
-				nagy jelentőségű verziója. 
-				Számos új funkciót és szintaxisjavítást vezetett be, 
-				amelyek megkönnyítik és hatékonyabbá teszik a kódírást, 
-				például a <code>let</code> és <code>const</code> kulcsszavakat, 
-				a <span class="kiemel">nyílfüggvények</span>et, 
-				a <span class="kiemel">destruktúrát</span>, 
-				az <span class="kiemel">osztály</span>okat 
-				és a <span class="kiemel">modul</span>okat. 
+				<span class="kiemel">JSX:</span> a JavaScript egy szintaxisbővítménye, amely HTML-szerű jelölést tesz
+				lehetővé JavaScript-fájlokon belül, és általában a React nevű JavaScript könyvtárral használják
+				felhasználói felületek (UI) létrehozásához. Ez leegyszerűsíti a komponensek írását és a webes
+				felületek megjelenítésének kezelését. A JSX kódot futtatás előtt le kell fordítani egyszerű JavaScriptre.
 			</p>
 			<h5>Főbb tulajdonságok:</h5>
 			<ol>
 				<li>
-					<b>let</b> és <b>const:</b> új változódeklarációs
-					kulcsszavak, amelyek a hatókör (<span class="kiemel"
-						>scope</span
-					>) szempontjából jobb kontrollt biztosítanak a
-					hagyományos <code>var</code>
-					helyett.
+					<b>Mi a funkciója:</b> Lehetővé teszi, hogy a JavaScriptben írj HTML-hez hasonló struktúrát,
+					ami intuitívabbá teszi a UI komponensek leírását.
 				</li>
 				<li>
-					<b>Arrow function:</b> (nyílfüggvények) részben
-					rövidebb szintaxist kínálnak a függvények írásához,
-					és automatikusan kezelik a
-					<code>this</code> kulcsszót.
+					<b>Hogyan működik: </b> Bár úgy néz ki, mint a HTML, valójában egy JavaScript kiterjesztés.
+					A végső futtatás előtt egy fordító
+					(például a Babel) alakítja át hagyományos JavaScript kóddá.
 				</li>
 				<li>
-					<b>Destruction: </b> (destruktúra) lehetővé teszi
-					objektumok vagy tömbök komplex szerkezeteinek
-					egyszerűbb részekre bontását.
-				</li>
-				<li>
-					<b>Spread operator:</b> kiterjeszti a tömböt vagy
-					objektumot elemekre vagy tulajdonságokra, például
-					függvények argumentumaiként.
-				</li>
-				<li>
-					<b>Class based inheritance: </b> JavaScriptben az
-					osztályok bevezetésével egyszerűbbé vált az
-					objektumorientált programozás.
-				</li>
-				<li>
-					<b>Modules:</b> beépített támogatást hozott a
-					modulokhoz, ami segít a kód szervezésében.
-				</li>
-				<li>
-					<b>Promise:</b> egyszerűsíti az aszinkron műveletek
-					kezelését.
-				</li>
-				<li>
-					<b>Default parameters:</b> lehetőséget ad arra, hogy
-					függvényparamétereknek alapértelmezett értékeket
-					adjunk.
+					<b>Miért használják:</b> Gyakran használják a React-tel,
+					mert nagymértékben leegyszerűsíti és olvashatóbbá teszi a komponensek strukturálását.
 				</li>
 			</ol>
 		</div>
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">MVC:</span>
-				(Model-View-Controller) egy szoftvertervezési minta,
-				amely az alkalmazás logikáját három fő komponensre
-				bontja: <b>M</b>odel (modell, adatok és üzleti logika),
-				<b>V</b>iew (nézet, felhasználói felület) és
-				<b>C</b>ontroller (vezérlő, logikai központ, amely
-				összeköti a kettőt). Célja, hogy elkülönítse az
-				adatkezelést a megjelenítéstől, ami megkönnyíti a
-				fejlesztést és a karbantartást.
+				<span class="kiemel">JSX komponens:</span>
+				egy újrafelhasználható felhasználói felületi darab, amely JavaScript függvényhez hasonlít,
+				és JSX (JavaScript XML) szintaxist használ a megjelenítendő UI leírására. Ezek a komponensek a
+				képernyőn megjelenő dolgokat írják le, szülő komponensektől kapnak bemenetet
+				(<span class="kiemel">props</span>),
+				és tetszőleges számú bemenetet fogadnak.
 			</p>
-			<h5>Három fő komponens:</h5>
+			<h5>Főbb tulajdonságok:</h5>
 			<ol>
 				<li>
-					<b>Model (modell):</b> Ez kezeli az alkalmazás
-					adatait és az üzleti logikát. Például, a modell
-					felelős az adatbázissal való kommunikációért, vagy
-					az adatok feldolgozásáért.
+					<b>Újrafelhasználható:</b> Lehetővé teszik, hogy a UI-t kisebb,
+					független részekre oszd, amiket többször is felhasználhatsz.
 				</li>
 				<li>
-					<b>View (nézet):</b> Ez felelős az adatok
-					megjelenítéséért a felhasználó számára. Ez lehet egy
-					grafikus felület, egy weboldal, vagy egy táblázat. A
-					nézet nem tartalmaz üzleti logikát, csak megjeleníti
-					az adatokat.
+					<b>JavaScript alapú:</b> Bár a szintaxis XML-re hasonlít, valójában JavaScript kódról van szó,
+					amelyet a böngésző nem ismer fel közvetlenül, de a build folyamatban JavaScript kóddá alakít át,
+					például a Babel segítségével.
 				</li>
 				<li>
-					<b>Controller (vezérlő):</b> Ez a komponens kezeli a
-					felhasználói bemenetet és összeköti a modellt a
-					nézettel. Például, ha a felhasználó egy gombra
-					kattint, a vezérlő felveszi a kérést, módosítja az
-					adatokat a modellben, majd a modell által adott új
-					adatok alapján frissíti a nézetet.
+					<b>Props bevitele:</b> Bemenetként "props" (tulajdonságokat) kapnak, amelyek meghatározzák,
+					hogyan kell kinézniük és viselkedniük.
+				</li>
+				<li>
+					<b>Visszatérési érték:</b> A komponens visszatér egy React elemmel, amely leírja,
+					mi jelenik meg a képernyőn.
 				</li>
 			</ol>
 		</div>
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">Dependency:</span> az
-				<span class="kiemel">Express.js</span>-ben a
-				<sapn class="kiemel">függőség</sapn> egy szükséges
-				<span class="kiemel">npm</span> csomag vagy könyvtár,
-				amelyet az alkalmazásnak futtatnia kell.
-			</p>
-			<p>
-				A leggyakoribb példa maga az
-				<span class="kiemel">express</span> keretrendszer.
-			</p>
-			<p>
-				Ezek a <code>package.json</code> állományban vannak
-				felsorolva, és automatikusan települnek a futtatásakor:
-				<code>npm install</code>.
-			</p>
-		</div>
-		<div class="kontener">
-			<h3>Fogalom:</h3>
-			<p>
-				<span class="kiemel">JSON:</span> (JavaScript Object Notation) egy ember által olvasható, könnyű súlyú szöveges formátum, 
-				amelyet rendszerek közötti adatcserére használnak. Két kulcsfontosságú struktúrára épül: 
-				<span class="kiemel">kulcs-érték</span> párokra és <span class="kiemel">tömbökre</span>, és sok programnyelv képes feldolgozni. 
-				Bár eredetileg a JavaScriptből származik, nyelvfüggetlen, és általában webszerverekből 
-				weboldalakra történő adatátvitelhez használják. 
+				<span class="kiemel">props:</span> a Reactben az adatok átvitelének módja egyik komponensből a másikba,
+				leggyakrabban szülő komponensből gyermek komponensbe. Ez teszi a komponenseket újrafelhasználhatóvá,
+				mivel a szülő komponens képes az adatokat (például egy termék nevét, árát) a gyermek komponensnek átadni,
+				a gyermek pedig ezeket megjelenítheti. A props bemenetként szolgál a komponensnek, és írásvédett (read-only),
+				ami azt jelenti, hogy a fogadó komponens nem módosíthatja azokat.
 			</p>
 			<h5>Főbb jellemzői:</h5>
 			<ol>
 				<li>
-					<b>Ember által olvasható:</b> Könnyen olvasható és írható a szoftverfejlesztők számára, 
-						ami leegyszerűsíti az adatokat érthetővé tévő folyamatokat.
+					<b>Adatátvitel:</b> A <span class="kiemel">props</span>-on keresztül a szülő komponens adatokat küldhet a gyermek komponensnek.
 				</li>
 				<li>
-					<b>Könnyű súlyú:</b> Mivel szövegalapú, viszonylag kis méretű, ami gyors és hatékony adatátvitelt tesz lehetővé.
+					<b>Írásvédett:</b> A gyermek komponens nem módosíthatja a kapott <span class="kiemel">props</span>-okat, csak felhasználhatja azokat.
 				</li>
 				<li>
-					<b>Nyelvfüggetlen:</b> Annak ellenére, hogy a neve a JavaScriptre utal, a JSON szabványt számos programozási nyelv képes értelmezni és használni.
+					<b>Egyirányú áramlás:</b> Az adat a szülő komponensből a gyermek felé áramlik, nem fordítva.
 				</li>
 				<li>
-					<b>Kulcs-érték párok és tömbök:</b> Az adatok strukturálása kulcs-érték párok és tömbök kombinációján alapul. Például:
-					<ul>
-						<li><b>Kulcs-érték:</b> { "név": "Példa", "kor": 30 }</li>
-						<li><b>Tömb:</b> ["alma", "körte", "banán"]</li>
-					</ul>
+					<b>Újrafelhasználhatóság:</b> Lehetővé teszi a komponensek többszöri felhasználását különböző adatokkal,
+					így konzisztens felhasználói felületet hozhatunk létre.
 				</li>
+				<li>
+					<b>Passzolás:</b> A <span class="kiemel">props</span>-okat JSX attribútumokként adjuk át a gyermek komponensnek, amikor azt a szülőben rendereljük.
+				</li>
+			</ol>
+		</div>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
+				<span class="kiemel">Dependency injection:</span> A <span class="kiemel">függőségbefecskendezés</span> egy olyan tervezési minta,
+				amelyben egy objektum külső forrásból kapja meg a függőségeit, ahelyett, hogy belsőleg létrehozná azokat.
+				Ezek a függőségek jellemzően szolgáltatások, objektumok vagy komponensek, amelyekre az objektum a feladatai
+				végrehajtásához támaszkodik.
+			</p>
+			<p>
+				Egyszerűbben fogalmazva, ahelyett, hogy egy objektum felelős lenne a függőségeinek példányosításáért,
+				azokat gyakran egy keretrendszer injektálja bele konstruktorokon, metódusokon vagy settereken keresztül.
+			</p>
+			<h5>Főbb jellemzői:</h5>
+			<ol>
+				<li><b>Dependency (függőség):</b> Egy osztály vagy komponens, amelyre egy másik osztálynak szüksége
+				van a működéséhez.</li>
+				<li><b>Injection (befecskendezés):</b> Külső függőség ellátása egy osztály számára.</li>
 			</ol>
 		</div>
 	</div>

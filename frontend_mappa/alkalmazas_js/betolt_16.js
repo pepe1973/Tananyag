@@ -1,128 +1,84 @@
 let betolt_16 = `
-	<h1>MongoDb csatlakozás</h1> 
-    <p>Ebben a részben összekötjük a <span class="kiemel">webszerver</span>ünket a korábban létrehozott 
-	<code>Cukraszda</code> <span class="kiemel">MongoDb</span> projektünkkel.</p>
+	<h1><code>App.jsx</code> szerkesztése</h1> 
+    <p>Ebben a részben létrehozzuk a <span class="kiemel">route</span>-okhoz tartozó logikát.</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>Parancssor:</h3>
 			<div class="kod-kontener">
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend</span></code></p>
-				<p><code class="parancs">$ cd utils</code></p>
-				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/utils</span></code></p>
-				<p><code class="parancs">$ touch dbConnection.mjs</code></p>
+				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend</span></code></p>
+				<p><code class="parancs">$ </code></p>
 			</div>
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<p><code>dbConnection.mjs</code></p>
+			<p><code>App.jsx</code></p>
 			<pre>
-import mongoose from 'mongoose';
+<span class="kiemel">import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';</span>
+import Cakes from './pages/Cakes/Cakes';
 
-const dbConnect = async () => {
-    const connect = await mongoose.connect(process.env.DBSTRING);
-    return connect;
-};
+<span class="kiemel">function App() {
+    return (
+        &lt;BrowserRouter&gt;
+            &lt;Navbar /&gt;
+            &lt;Routes&gt;
+                &lt;Route path='/' element={&lt;Home /&gt;} /&gt;</span>
+                &lt;Route path='/cakes' element={&lt;Cakes /&gt;} /&gt;
+            <span class="kiemel">&lt;/Routes&gt;
+        &lt;/BrowserRouter&gt;
+    );
+}</span>
 
-export default dbConnect;
-			</pre
-			>
-			<h5><code>server.mjs</code></h5>
-			<pre>
-import dotenv from 'dotenv';
-dotenv.config();
-
-import express from 'express';
-
-const PORT = process.env.PORT || 3500;
-const app = express();
-
-<span class="kiemel">import dbConnect from './utils/dbConnection.mjs';</span>
-
-<span class="kiemel">dbConnect()
-    .then(() => {
-        console.log('Sikeres adatbázis csatlakozás!');</span>
-        app.listen(PORT, () => {
-            console.log(\`http://localhost:\${PORT}/api\`);
-        });
-    <span class="kiemel">})
-    .catch((error) => {
-        console.error(\`A hiba oka: \${error.message}\`);
-    });</span> 
+export default App;
 			</pre>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>
 			<p>
-				Lépjünk be a <code>utils</code> mappába.
+				Maradjunk a <code>frontend</code> mappában.
 			</p>
 			<p>
-				Ehhez adjuk ki a
-				<code>cd utils</code>
-				utasítást a parancssorban. 
+				Nyissuk meg a <code>frontend/src/App.jsx</code> állományt
+				szerkesztésre.
 			</p>
-			<p>
-				A <code>utils</code> mappában hozzunk létre egy <code>dbConnection.mjs</code> nevű állományt.
-			</p>
-			<p>
-				Ehhez adjuk ki a
-				<code>touch dbConnection.mjs</code>
-				utasítást a parancssorban. 
-			</p>
-			<p>Csak a <span class="kiemel">Git Bash</span> felületen működik!</p>
 		</div>
 		<div class="kontener">
 			<h3>Magyarázat:</h3>
-			<p>A <code>dbConnection.mjs</code> állomány szerkesztése.</p>
 			<ol>
 				<li>
-					<code>import mongoose from 'mongoose';</code> -
-					importáljuk be a <code>mongoose</code> csomagot.
+					<code>import { BrowserRouter, Routes, Route } from 'react-router-dom';</code> -
+					dekonstruáljuk a <code>BrowserRouter</code>, <code>Routes</code>
+					és <code>Route</code> objektumokat a <code>react-router-dom</code> csomagból.
 				</li>
 				<li>
-					<code>const dbConnect = </code> - hozzunk létre egy
-					<code>dbConnect</code> nevű függvényt.
+					<code>import Navbar from './components/Navbar/Navbar';</code> -
+					importáljuk be a <code>Navbar</code> komponenst a megfelelő állományból.
 				</li>
 				<li>
-					<code>async () =></code> - a függvény legyen
-					aszinkron működésű.
+					<code>import Home from './pages/Home/Home';</code> -
+					importáljuk be a <code>Home</code> oldalt a megfelelő állományból.
 				</li>
 				<li>
-					<code>const connect = </code>
-					- hozzunk létre egy változót
-					<span class="kiemel">promise</span> eltárolására.
+					<code>function App() { return (); }</code> -
+					hozzuk létre az <code>App</code> nevű komponenst.
 				</li>
 				<li>
-					<code>await mongoose.connect(process.env.DBSTRING);</code>
-					- a <span class="kiemel">promise</span>.
+					<code>&lt;BrowserRouter&gt;&lt;/BrowserRouter&gt;</code> -
+					a <span class="kiemel">route</span>-okat összefogó komponens.
 				</li>
 				<li>
-					<code>return connect;</code>
-					- térjünk vissza a <span class="kiemel">promise</span>-szal.
+				<code>&lt;Navbar /&gt;</code> -
+				a <span class="kiemel">&lt;Navbar /&gt;</span> komponens beimportálása.
 				</li>
 				<li>
-					<code>export default dbConnect;</code> - vigyük ki
-					alapértelmezett exportként a
-					<code>dbConnect</code> függvényt.
-				</li>
-			</ol>
-			<p>Módosítások a <code>server.mjs</code> állományban.</p>
-			<ol>
-				<li>
-					<code>import dbConnect from './utils/dbConnection.mjs';</code>
-					- a <code>dbConnect</code> függvény beimportálása az
-					adott állományból.
+					<code>&lt;Routes&gt;&lt;/Routes&gt;</code> -
+					szorosan összefogó komponensek gyűjtő komponens.
 				</li>
 				<li>
-					<code>dbConnect()</code> - a
-					<span class="kiemel">promise</span> meghívása.
-				</li>
-				<li>
-					<code>.then(() => { console.log('Sikeres adatbázis csatlakozás!');})</code>
-					- a <span class="kiemel">promise</span> "teljesült" (<span class="kiemel">fulfilled</span>) ága.
-				</li>
-				<li>
-					<code>.catch((error) => { console. error(\`A hiba oka: \${error.message}\`); });</code>
-					- a <span class="kiemel">promise</span> "eldobott" (<span class="kiemel">rejected</span>) ága.
+					<code>&lt;Route path='/' element={&lt;Home /&gt;} /&gt;</code> -
+					a <span class="kiemel">&lt;home /&gt;</span> komponens beimportálása a <code>/</code>
+					<span class="kiemel">route</span>-hoz kapcsolódóan.
 				</li>
 			</ol>
 		</div>

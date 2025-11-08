@@ -1,61 +1,267 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=expand_circle_down" />
-    <link rel="stylesheet" href="./stilus.css" />
-	<link rel="shortcut icon" href="./logo.png" type="image/x-icon">
-	<title>Frontend programozás tananyag</title>
-</head>
-<body onload="alap_betolt()">
-	<div id="title-kontener">
-        <a href="../index.html">Frontend Programozás</a>
-    </div>
-	<div id="main-kontener">
-		<div id="bal-kontener">
-			<div id="bal-lista">
-				<li><button class="marad nyit" onclick="betolt(0, 0, 'igen')">Bevezetés</button></li>
-				 <li>
-                    <button class="marad" onclick="kinyit(0, 1, 0)">Fogalmak</button>
-                    <span class="material-symbols-outlined" onclick="kinyit(0, 1, 0)">expand_circle_down</span>
-                </li>
-				<div class="elrejt">
-					<!-- <li><button class="rejt nyit" onclick="betolt(1, 'nem')">Összefoglaló</button></li>
-					<li><button class="rejt nyit" onclick="betolt(2, 'nem')">Fogalmak 1</button></li>
-					<li><button class="rejt nyit" onclick="betolt(3, 'nem')">Fogalmak 2</button></li>
-					<li><button class="rejt nyit" onclick="betolt(4, 'nem')">Fogalmak 3</button></li>
-					<li><button class="rejt nyit" onclick="betolt(5, 'nem')">Fogalmak 4</button></li>
-					<li><button class="rejt nyit" onclick="betolt(6, 'nem')">Fogalmak 5</button></li>
-					<li><button class="rejt nyit" onclick="betolt(7, 'nem')">Fogalmak 6</button></li>
-					<li><button class="rejt nyit" onclick="betolt(8, 'nem')">Fogalmak 7</button></li> -->
-				</div> 
-				<li>
-                    <button class="marad" onclick="kinyit(1, 9, 0)">React alkalmazás alapbeállítás</button>
-                    <span class="material-symbols-outlined" onclick="kinyit(1, 9, 0)">expand_circle_down</span>
-                </li>
-				<div class="elrejt">
-					<li><button class="rejt nyit" onclick="betolt(1, 9, 'nem')">Összefoglaló</button></li>
-					<li><button class="rejt nyit" onclick="betolt(2, 10, 'nem')">Lépés 1</button></li>
-					<li><button class="rejt nyit" onclick="betolt(3, 11, 'nem')">Lépés 2</button></li>
-					<li><button class="rejt nyit" onclick="betolt(4, 12, 'nem')">Lépés 3</button></li>
-					<!-- <li><button class="rejt nyit" onclick="betolt(13, 'nem')">Lépés 4</button></li>
-					<li><button class="rejt nyit" onclick="betolt(14, 'nem')">Lépés 5</button></li>
-					<li><button class="rejt nyit" onclick="betolt(15, 'nem')">Lépés 6</button></li> -->
-				</div>
-				<!-- <li><button class="marad nyit" onclick="betolt(16, 'igen')">MongoDb csatlakozás</button></li>
-				<li><button class="marad nyit" onclick="betolt(17, 'igen')">Cloudinary beállítása</button></li>
-				<li>
-                    <button class="marad" onclick="kinyit(2, 18, 15)">/api route</button>
-                    <span class="material-symbols-outlined" onclick="kinyit(2, 18, 15)">expand_circle_down</span>
-                </li>
-				<div class="elrejt">
-					<li><button class="rejt nyit" onclick="betolt(18, 'nem')">Összefoglaló</button></li>
-					<li><button class="rejt nyit" onclick="betolt(19, 'nem')">Lépés 1</button></li>
-					<li><button class="rejt nyit" onclick="betolt(20, 'nem')">Lépés 2</button></li>
-					<li><button class="rejt nyit" onclick="betolt(21, 'nem')">Lépés 3</button></li>
-				</div>
-				<li><button class="marad nyit" onclick="betolt(22, 'igen')">Statikus mappa beállítása</button></li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=expand_circle_down"
+        />
+        <link
+            rel="stylesheet"
+            href="./stilus.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./logo.png"
+            type="image/x-icon"
+        />
+        <title>Frontend programozás tananyag</title>
+    </head>
+    <body onload="alap_betolt()">
+        <div id="title-kontener">
+            <a href="../index.html">Frontend Programozás</a>
+        </div>
+        <div id="main-kontener">
+            <div id="bal-kontener">
+                <div id="bal-lista">
+                    <li>
+                        <button
+                            class="marad nyit"
+                            onclick="betolt(0, 0, 'igen')"
+                        >
+                            Bevezetés
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            class="marad"
+                            onclick="kinyit(0, 1, 0)"
+                        >
+                            Fogalmak
+                        </button>
+                        <span
+                            class="material-symbols-outlined"
+                            onclick="kinyit(0, 1, 0)"
+                            >expand_circle_down</span
+                        >
+                    </li>
+                    <div class="elrejt">
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(1, 1, 'nem')"
+                            >
+                                Összefoglaló
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(2, 2, 'nem')"
+                            >
+                                Fogalmak 1
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(3, 3, 'nem')"
+                            >
+                                Fogalmak 2
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(4, 4, 'nem')"
+                            >
+                                Fogalmak 3
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(5, 5, 'nem')"
+                            >
+                                Fogalmak 4
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(6, 6, 'nem')"
+                            >
+                                Fogalmak 5
+                            </button>
+                        </li>
+                        <!-- <li><button class="rejt nyit" onclick="betolt(7, 'nem')">Fogalmak 6</button></li>
+					    <li><button class="rejt nyit" onclick="betolt(8, 'nem')">Fogalmak 7</button></li> -->
+                    </div>
+                    <li>
+                        <button
+                            class="marad"
+                            onclick="kinyit(1, 9, 6)"
+                        >
+                            React alkalmazás alapbeállítás
+                        </button>
+                        <span
+                            class="material-symbols-outlined"
+                            onclick="kinyit(1, 9, 6)"
+                            >expand_circle_down</span
+                        >
+                    </li>
+                    <div class="elrejt">
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(7, 9, 'nem')"
+                            >
+                                Összefoglaló
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(8, 10, 'nem')"
+                            >
+                                Lépés 1
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(9, 11, 'nem')"
+                            >
+                                Lépés 2
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(10, 12, 'nem')"
+                            >
+                                Lépés 3
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(11, 13, 'nem')"
+                            >
+                                Lépés 4
+                            </button>
+                        </li>
+                        <!-- <li><button class="rejt nyit" onclick="betolt(15, 'nem')">Lépés 6</button></li> -->
+                    </div>
+
+                    <!-- <li><button class="marad nyit" onclick="betolt(17, 'igen')">Cloudinary beállítása</button></li> -->
+                    <li>
+                        <button
+                            class="marad"
+                            onclick="kinyit(2, 14, 11)"
+                        >
+                            Routing-olás
+                        </button>
+                        <span
+                            class="material-symbols-outlined"
+                            onclick="kinyit(2, 14, 11)"
+                            >expand_circle_down</span
+                        >
+                    </li>
+                    <div class="elrejt">
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(12, 14, 'nem')"
+                            >
+                                Összefoglaló
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(13, 15, 'nem')"
+                            >
+                                Lépés 1
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(14, 16, 'nem')"
+                            >
+                                Lépés 2
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(15, 17, 'nem')"
+                            >
+                                Lépés 3
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(16, 18, 'nem')"
+                            >
+                                Lépés 4
+                            </button>
+                        </li>
+                    </div>
+                    <li>
+                        <button
+                            class="marad"
+                            onclick="kinyit(3, 19, 16)"
+                        >
+                            Cakes komponens kidolgozása
+                        </button>
+                        <span
+                            class="material-symbols-outlined"
+                            onclick="kinyit(3, 19, 16)"
+                            >expand_circle_down</span
+                        >
+                    </li>
+                    <div class="elrejt">
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(17, 19, 'nem')"
+                            >
+                                Összefoglaló
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(18, 20, 'nem')"
+                            >
+                                Lépés 1
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(19, 21, 'nem')"
+                            >
+                                Lépés 2
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                class="rejt nyit"
+                                onclick="betolt(20, 22, 'nem')"
+                            >
+                                Lépés 3
+                            </button>
+                        </li>
+                    </div>
+                    <!-- <li><button class="marad nyit" onclick="betolt(22, 'igen')">Statikus mappa beállítása</button></li>
 				<li>
 					<button class="marad" onclick="kinyit(3, 23, 19)">/api/cakes-backend route</button>
 					<span class="material-symbols-outlined" onclick="kinyit(3, 23, 19)">expand_circle_down</span>
@@ -90,49 +296,49 @@
 					<li><button class="rejt nyit" onclick="betolt(37, 'nem')">Lépés 3</button></li>
 					<li><button class="rejt nyit" onclick="betolt(38, 'nem')">Lépés 4</button></li>
 				</div> -->
-			</div>
-		</div>
-		<div id="jobb-kontener"></div>
-	</div>
-	<script src="./alkalmazas_js/betolt_38.js"></script>
-	<script src="./alkalmazas_js/betolt_37.js"></script>
-	<script src="./alkalmazas_js/betolt_36.js"></script>
-	<script src="./alkalmazas_js/betolt_35.js"></script>
-	<script src="./alkalmazas_js/betolt_34.js"></script>
-	<script src="./alkalmazas_js/betolt_33.js"></script>
-	<script src="./alkalmazas_js/betolt_32.js"></script>
-	<script src="./alkalmazas_js/betolt_31.js"></script>
-	<script src="./alkalmazas_js/betolt_30.js"></script>
-	<script src="./alkalmazas_js/betolt_29.js"></script>
-	<script src="./alkalmazas_js/betolt_28.js"></script>
-	<script src="./alkalmazas_js/betolt_27.js"></script>
-	<script src="./alkalmazas_js/betolt_26.js"></script>
-	<script src="./alkalmazas_js/betolt_25.js"></script>
-	<script src="./alkalmazas_js/betolt_24.js"></script>
-	<script src="./alkalmazas_js/betolt_23.js"></script>
-	<script src="./alkalmazas_js/betolt_22.js"></script>
-	<script src="./alkalmazas_js/betolt_21.js"></script>
-	<script src="./alkalmazas_js/betolt_20.js"></script>
-	<script src="./alkalmazas_js/betolt_19.js"></script>
-	<script src="./alkalmazas_js/betolt_18.js"></script>
-	<script src="./alkalmazas_js/betolt_17.js"></script>
-	<script src="./alkalmazas_js/betolt_16.js"></script>
-	<script src="./alkalmazas_js/betolt_15.js"></script>
-	<script src="./alkalmazas_js/betolt_14.js"></script>
-	<script src="./alkalmazas_js/betolt_13.js"></script>
-	<script src="./alkalmazas_js/betolt_12.js"></script>
-	<script src="./alkalmazas_js/betolt_11.js"></script>
-	<script src="./alkalmazas_js/betolt_10.js"></script>
-	<script src="./alkalmazas_js/betolt_09.js"></script>
-	<script src="./alkalmazas_js/betolt_08.js"></script>
-	<script src="./alkalmazas_js/betolt_07.js"></script>
-	<script src="./alkalmazas_js/betolt_06.js"></script>
-	<script src="./alkalmazas_js/betolt_05.js"></script>
-	<script src="./alkalmazas_js/betolt_04.js"></script>
-	<script src="./alkalmazas_js/betolt_03.js"></script>
-	<script src="./alkalmazas_js/betolt_02.js"></script>
-	<script src="./alkalmazas_js/betolt_01.js"></script>
-	<script src="./alkalmazas_js/betolt_00.js"></script>
-	<script src="./betolt.js"></script>
-</body>
+                </div>
+            </div>
+            <div id="jobb-kontener"></div>
+        </div>
+        <script src="./alkalmazas_js/betolt_38.js"></script>
+        <script src="./alkalmazas_js/betolt_37.js"></script>
+        <script src="./alkalmazas_js/betolt_36.js"></script>
+        <script src="./alkalmazas_js/betolt_35.js"></script>
+        <script src="./alkalmazas_js/betolt_34.js"></script>
+        <script src="./alkalmazas_js/betolt_33.js"></script>
+        <script src="./alkalmazas_js/betolt_32.js"></script>
+        <script src="./alkalmazas_js/betolt_31.js"></script>
+        <script src="./alkalmazas_js/betolt_30.js"></script>
+        <script src="./alkalmazas_js/betolt_29.js"></script>
+        <script src="./alkalmazas_js/betolt_28.js"></script>
+        <script src="./alkalmazas_js/betolt_27.js"></script>
+        <script src="./alkalmazas_js/betolt_26.js"></script>
+        <script src="./alkalmazas_js/betolt_25.js"></script>
+        <script src="./alkalmazas_js/betolt_24.js"></script>
+        <script src="./alkalmazas_js/betolt_23.js"></script>
+        <script src="./alkalmazas_js/betolt_22.js"></script>
+        <script src="./alkalmazas_js/betolt_21.js"></script>
+        <script src="./alkalmazas_js/betolt_20.js"></script>
+        <script src="./alkalmazas_js/betolt_19.js"></script>
+        <script src="./alkalmazas_js/betolt_18.js"></script>
+        <script src="./alkalmazas_js/betolt_17.js"></script>
+        <script src="./alkalmazas_js/betolt_16.js"></script>
+        <script src="./alkalmazas_js/betolt_15.js"></script>
+        <script src="./alkalmazas_js/betolt_14.js"></script>
+        <script src="./alkalmazas_js/betolt_13.js"></script>
+        <script src="./alkalmazas_js/betolt_12.js"></script>
+        <script src="./alkalmazas_js/betolt_11.js"></script>
+        <script src="./alkalmazas_js/betolt_10.js"></script>
+        <script src="./alkalmazas_js/betolt_09.js"></script>
+        <script src="./alkalmazas_js/betolt_08.js"></script>
+        <script src="./alkalmazas_js/betolt_07.js"></script>
+        <script src="./alkalmazas_js/betolt_06.js"></script>
+        <script src="./alkalmazas_js/betolt_05.js"></script>
+        <script src="./alkalmazas_js/betolt_04.js"></script>
+        <script src="./alkalmazas_js/betolt_03.js"></script>
+        <script src="./alkalmazas_js/betolt_02.js"></script>
+        <script src="./alkalmazas_js/betolt_01.js"></script>
+        <script src="./alkalmazas_js/betolt_00.js"></script>
+        <script src="./betolt.js"></script>
+    </body>
 </html>

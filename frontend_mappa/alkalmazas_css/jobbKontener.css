@@ -29,6 +29,11 @@ pre {
     color: var(--piros);
 }
 
+.keret {
+    border: 1px solid var(--piros);
+    padding: 1em;
+}
+
 .git-lila {
     color: var(--lila);
 }

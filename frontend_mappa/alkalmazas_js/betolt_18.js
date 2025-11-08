@@ -1,14 +1,49 @@
 let betolt_18 = `
-	<h1>/api route kidolgozása - Összefoglaló</h1> 
-    <p>Ebben a részben kidolgozzuk az <code>/api</code> <span class="kiemel">route</span>-hoz tartozó
-	<span class="kiemel">CRUD</span> műveleteket.</p>
-	<p>Az ehhez tartozó <span class="kiemel">endpoint</span> - <code>http://localhost:3500/api</code>
-	vagy <code>http://localhost:127.0.0.1/api</code></p>
-	<h5>Lépés 1:</h5>
-	<p>A <code>controllers</code> mappában lévő <code>mainControllersBackend.mjs</code> állomány szerkesztése.</p>
-	<h5>Lépés 2:</h5>
-	<p>A <code>views</code> mappában lévő <code>nav.ejs</code>, <code>index.ejs</code> és 
-	<code>404.ejs</code> állományok szerkesztése.</p>
-	<h5>Lépés 3:</h5>
-	<p>A <code>routes</code> mappában lévő <code>mainRoutesBackend.mjs</code> állomány szerkesztése.</p>
+	<h1><code>Home.jsx</code> szerkesztése</h1> 
+    <p>Következő lépésként hozzuk létre a <code>Home.jsx</code> állományt.</p>
+	<div class="row-3">
+		<div class="kontener">
+			<h3>Parancssor:</h3>
+			<div class="kod-kontener">
+				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/frontend</span></code></p>
+				<p><code class="parancs">$ </code></p>
+			</div>
+		</div>
+		<div class="kontener">
+			<h3>Visual Studio Code:</h3>
+			<code>Home.jsx</code>
+			<pre>
+<span class="kiemel">import './Home.css';</span>
+
+const Home = () => {
+    return (
+        &lt;div className="home-kontener"&gt;
+            &lt;h1&gt;Cukrászda&lt;/h1&gt;
+        &lt;/div&gt;
+    );
+};
+
+export default Home;
+			</pre>
+		</div>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<p>
+				Maradjunk a <code>frontend</code> mappában.
+			</p>
+			<p>
+				Nyissuk meg a <code>frontend/src/pages/Home/Home.jsx</code> állományt
+				szerkesztésre.
+			</p>
+		</div>
+		<div class="kontener">
+			<h3>Magyarázat:</h3>
+			<ol>
+				<li>
+					<code>import './Home.css';</code> -
+					importáljuk be a stílust.
+				</li>
+			</ol>
+		</div>
+	</div>
 	`;

@@ -1,99 +1,112 @@
 let betolt_04 = `
 	<h1>Fogalmak 3</h1> 
-    <p>Ebben a részben megismerkedünk a backend programozással kapcsolatos fogalmakkal.</p>
+    <p>Ebben a részben megismerkedünk a frontend programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">process.env:</span> a
-				<code>process.env</code> globális változót a
-				<span class="kiemel">Node.js</span> injektálja
-				futásidőben az alkalmazás számára, és ez a változó az
-				alkalmazás indításakor fennálló
-				<spanspan class="kiemel"
-					>rendszerkörnyezet állapotát</spanspan
-				>
-				jelöli (környezeti változók).
+				<span class="kiemel">State:</span> egy objektum, amely egy komponens belső információit tárolja,
+				és ez az információ az idő múlásával változhat. Amikor a <span class="kiemel">state</span> megváltozik (például felhasználói beavatkozás
+				vagy adat lekérése miatt), a React automatikusan újrarajzolja a komponens felületét,
+				hogy tükrözze az aktuális adatokat.
 			</p>
-			<p>
-				Például, ha a rendszerhez be van állítva egy
-				<code>PORT</code> változó, akkor ez a
-				<code>process.env.PORT</code>
-				segítségével lesz elérhető.
-			</p>
-			</div>
-		<div class="kontener">
-			<h3>Fogalom:</h3>
-			<p>
-				<span class="kiemel">Version control:</span> egy
-				rendszer a fájlok időbeli változásainak nyomon
-				követésére és kezelésére, amely lehetővé teszi az
-				együttműködést és a korábbi verziókhoz való
-				visszatérést.
-			</p>
-			<p>
-				Ez egy elsősorban szoftverfejlesztésben használt
-				gyakorlat a forráskód kezelésére, de más dokumentumokra
-				és projektekre is alkalmazható.
-			</p>
-			<p>
-				A verziókövető rendszerek olyan szoftvereszközök,
-				amelyek pillanatképeket készítenek a fájlokról, lehetővé
-				téve a fejlesztők számára, hogy egyszerre dolgozzanak
-				anélkül, hogy elveszítenék munkájukat, vagy felülírnák
-				mások módosításait.
-			</p>
-		</div>
-		<div class="kontener">
-			<h3>Fogalom:</h3>
-			<p>
-				<span class="kiemel">Webszerver:</span> egy szoftver
-				vagy hardver, amely tárolja a weboldalakat (HTML-fájlok,
-				képek stb.), és HTTP protokollon keresztül kiszolgálja
-				azokat a felhasználók böngészői felé kérésre. Amikor egy
-				webcím meg van adva, a böngésző kapcsolódik a
-				webszerverhez, amely továbbítja a kért weboldal
-				tartalmát. Ezt a szoftvert és hardvert egyaránt
-				nevezhetjük webszervernek, és feladata a webes tartalmak
-				tárolása és elérhetővé tétele.
-			</p>
-			<h5>Főbb funkciói:</h5>
+			<h5>Főbb jellemzői:</h5>
 			<ol>
 				<li>
-					<b>Weboldalak kiszolgálása:</b> Statikus (pl. HTML,
-					CSS, JavaScript, képek) és dinamikus tartalmakat
-					(pl. adatbázisokból generált oldalakat) küld a
-					böngészőknek.
+					<b>Adattárolás:</b> A <span class="kiemel">state</span> kulcs-érték párokat tartalmazó objektum,
+					amely olyan adatokat tárol, amelyeket a komponensnek kezelnie kell.
 				</li>
 				<li>
-					<b>HTTP kérések kezelése:</b> Fogadja a böngészők
-					HTTP kéréseit, és válaszként elküldi a kért
-					erőforrást vagy hibaüzenetet.
+					<b>Dinamikus UI:</b> Segítségével a komponensek dinamikusan képesek reagálni a változásokra,
+					és frissíteni a felhasználói felületet.
 				</li>
 				<li>
-					<b>Webes tartalom tárolása:</b> A weboldalakhoz
-					szükséges összes fájlt (HTML, CSS, JavaScript,
-					képek, videók stb.) tárolja.
+					<b>Változó adattípusok:</b>  A <span class="kiemel">state</span>-ben tárolhatunk különböző típusú adatokat,
+					mint például string, szám, boolean vagy tömb.
 				</li>
 				<li>
-					<b>Biztonság:</b> Védelmi funkciókat is elláthat a
-					biztonsági fenyegetésekkel szemben.
+					<b>Minden hooknak megvan a maga funkciója:</b> Például a <code>useState</code> hook lehetővé teszi az
+					állapot kezelését, míg az <code>useEffect</code> hook a mellékhatások kezelésére szolgál,
+					mint például az adatok lekérdezése.
 				</li>
 			</ol>
 		</div>
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">CRUD:</span> az állandó adattárolás
-				négy alapvető funkciójának betűszava: <span class="kiemel">létrehozás</span>,
-				<span class="kiemel">olvasás</span>, <span class="kiemel">frissítés</span> 
-				és <span class="kiemel">törlés</span>. Ezek a műveletek alapvető
-				fontosságúak az alkalmazásokban és adatbázisokban lévő
-				adatok kezeléséhez, lehetővé téve a felhasználók számára
-				új rekordok hozzáadását, meglévő adatok lekérését,
-				aktuális rekordok módosítását és régi adatok
-				eltávolítását.
+				<span class="kiemel">Hook:</span> olyan speciális funkciók, amelyek lehetővé teszik állapotkezelést és
+				más React-funkciók, például az életciklus-műveletek használatát funkcionális komponensekben, anélkül,
+				hogy osztályokat kellene írni. Ezzel leegyszerűsítik és olvashatóbbá teszik a kódot,
+				és lehetővé teszik a logika újrafelhasználását több komponens között.
 			</p>
+			<h5>Főbb jellemzői:</h5>
+			<ol>
+				<li>
+					<b>Lehetővé teszik az állapotkezelést funkcionális komponensekben:</b> Korábban
+					erre csak osztályalapú komponensek voltak képesek.
+				</li>
+				<li>
+					<b>Leegyszerűsítik a kód írását:</b> Egyszerűbbé és olvashatóbbá teszik a fejlesztést azáltal,
+					hogy a funkciókat közvetlenül a komponensekbe lehet integrálni.
+				</li>
+				<li>
+					<b>Újrafelhasználhatóvá teszik a logikát:</b> Segítenek a logikai egységek kinyerésében és
+					megosztásában, így azok több helyen is felhasználhatók.
+				</li>
+				<li>
+					<b>Minden hooknak megvan a maga funkciója:</b> Például a <code>useState</code> hook lehetővé teszi az
+					állapot kezelését, míg az <code>useEffect</code> hook a mellékhatások kezelésére szolgál,
+					mint például az adatok lekérdezése.
+				</li>
+			</ol>
+		</div>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
+				<span class="kiemel">useState():</span> egy <span class="kiemel">React Hook</span>, amely lehetővé teszi a
+				funkcionális komponensek számára, hogy állapotot kezeljenek. Használatakor egy tömböt ad vissza,
+				amely az aktuális állapotot és egy állapotfrissítő funkciót tartalmaz. Ezzel a komponensek a saját
+				<span class="kiemel">state</span>-jüket tárolhatják és tudják módosítani, például gomb kattintására.
+			</p>
+			<h5>Főbb tulajdonságai:</h5>
+			<ol>
+				<li>
+					<b>Kezdeti érték:</b> A <span class="kiemel">useState</span> egy kezdeti értéket fogad el argumentumként,
+					ami az állapot kezdeti értéke lesz.
+				</li>
+				<li>
+					<b>State (állapot):</b>  A <span class="kiemel">useState</span> visszaadott tömbjének első eleme az aktuális állapotérték.
+				</li>
+				<li>
+					<b>Állapotfrissítő funkció:</b> A tömb második eleme egy funkció, amit meghívva az állapot frissíthető,
+					és a komponens újra renderelhető.
+				</li>
+			</ol>
+			<p><a href="https://www.w3schools.com/react/react_usestate.asp" target="_blank">w3schools: useState()</a></p>
+		</div>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
+			<span class="kiemel">useEffect():</span> egy React-horog, amellyel a komponensek renderelése után tudsz
+			mellékhatásokat (pl. adat lekérése, feliratkozások, DOM manipuláció) végrehajtani.
+			A <span class="kiemel">useEffect</span> funkciója, hogy elérhető,
+			hogy a komponens a DOM frissítései után fusson le, és ezen a módon tudsz elvégezni bizonyos műveleteket,
+			mint például API-hívásokat kezdeményezni vagy feliratkozásokat kezelni.
+			</p>
+			<h5>Főbb tulajdonságai:</h5>
+			<ol>
+				<li>
+					<b>Fő funkció:</b>  Lehetővé teszi a mellékhatások kezelését, miután a komponens már lefutott és megjelent a DOM-ban.
+				</li>
+				<li>
+					<b>Felhasználás:</b>  Hasznos adatlekérésekhez, feliratkozásokhoz és manuális DOM-manipulációkhoz.
+				</li>
+				<li>
+					<b>Működés:</b> Átadsz neki egy függvényt, amely a komponens renderelése után fog futni,
+					így a React "emlékszik" rá és végrehajtja.
+				</li>
+			</ol>
+			<p><a href="https://www.w3schools.com/react/react_useeffect.asp" target="_blank">w3schools: useEffect()</a></p>
 		</div>
 	</div>
 	`;

@@ -20,9 +20,6 @@ let betolt_11 = `
 			</div>
 		</div>
 		<div class="kontener">
-			<h3>Visual Studio Code:</h3>
-		</div>
-		<div class="kontener">
 			<h3>Magyarázat:</h3>
 			<p>
 				Lépjünk be az <code>src</code> mappába.
@@ -60,43 +57,6 @@ let betolt_11 = `
 			<p>
 			Ehhez adjuk ki az <code>rm vite.svg</code> utasítást a parancssorban.
 			</p>
-		</div>
-		<div class="kontener">
-			<h3>Magyarázat:</h3>
-			<ol>
-				<li>
-					<code>controllers</code> -
-					<span class="kiemel">CRUD</span> műveletek
-					kezeléséhez.
-				</li>
-				<li>
-					<code>middlewares</code> - az
-					<code>HTTP Request</code> és
-					<code>HTTP Response</code> között végzett műveletek
-					kezeléséhez.
-				</li>
-				<li>
-					<code>models</code> -
-					<span class="kiemel">MongoDb</span> modellek
-					kezeléséhez.
-				</li>
-				<li>
-					<code>public</code> - statikus állományok
-					kezeléséhez.
-				</li>
-				<li>
-					<code>routes</code> - <code>route</code>-ok
-					kezeléséhez.
-				</li>
-				<li>
-					<code>utils</code> - szerver működéséhez szükséges
-					dolgok kezeléséhez.
-				</li>
-				<li>
-					<code>views</code> - szerveroldali user interface
-					kezeléséhez.
-				</li>
-			</ol>
 		</div>
 	</div>
 	`;

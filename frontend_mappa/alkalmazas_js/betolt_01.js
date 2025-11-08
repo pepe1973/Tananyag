@@ -3,35 +3,27 @@ let betolt_01 = `
     <p>Ebben a részben megismerkedünk a frontend programozással kapcsolatos fogalmakkal.</p>
 	<ul>
 	<h5>Fogalmak 1:</h5>
-	<li>Backend programozás</li>
-	<li>Szerveroldali logika</li>
-	<li>package.json</li>
-	<li>API</li>
-	<h5>Fogalmak 2:</h5>
+	<li>Frontend programozás</li>
 	<li>ES6</li>
-	<li>MVC</li>
-	<li>Dependency (függőség)</li>
-	<li>JSON</li>
+	<li>React</li>
+	<li>Vite</li>
+	<h5>Fogalmak 2:</h5>
+	<li>JSX</li>
+	<li>JSX komponens</li>
+	<li>props</li>
+	<li>Dependency Injection (függőségbefecskendezés)</li>
 	<h5>Fogalmak 3:</h5>
-	<li>process.env (környezeti változók)</li>
-	<li>Version Control (verziókövetés)</li>
-	<li>Webszerver</li>
-	<li>CRUD</li>
+	<li>State</li>
+	<li>Hook</li>
+	<li>useState()</li>
+	<li>useEffect()</li>
 	<h5>Fogalmak 4:</h5>
-	<li>MongoDb</li>
-	<li>MongoDb model</li>
-	<li>Promise (ígéretobjektum)</li>
-	<li>Middleware</li>
+	<li>useContext()</li>
+	<li>useRef()</li>
+	<li>useReducer()</li>
+	<li>useCallback()</li>
 	<h5>Fogalmak 5:</h5>
-	<li>Endpoint (végpont), socket</li>
-	<li>Route</li>
-	<li>Request params</li>
-	<li>req.params</li>
-	<h5>Fogalmak 6:</h5>
-	<li>req.body</li>
-	<li>View engine (nézetmotor)</li>
-	<li>express.static() (statikus mappa)</li>
-	<h5>Fogalmak 7:</h5>
-	<li>HTTP methods</li>
+	<li>useMemo()</li>
+	<li>CORS</li>
 	</ul>
 	`;
