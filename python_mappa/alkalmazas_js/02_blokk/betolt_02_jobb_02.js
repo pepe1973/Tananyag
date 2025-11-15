@@ -1,6 +1,8 @@
 let betolt_02_jobb_02 = `
 	<h1>Fogalmak 2</h1> 
-    <p>Ebben a részben megismerkedünk a Python programozással kapcsolatos fogalmakkal.</p>
+    <p>
+		Ebben a részben megismerkedünk a Python programozással kapcsolatos fogalmakkal.
+	</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>Fogalom:</h3>
@@ -25,7 +27,9 @@ let betolt_02_jobb_02 = `
 				A Python különböző típusú literálokat támogat, például numerikus literálokat, karakterlánc-literálokat,
 				logikai literálokat és speciális értékeket, például a None-t.
 			</p>
-			<p><a href="https://www.geeksforgeeks.org/python/literals-in-python/" target="_blank">GeeksForGeeks - Literals in Python</a></p>
+			<p>
+				<a href="https://www.geeksforgeeks.org/python/literals-in-python/" target="_blank">GeeksForGeeks - Literals in Python</a>
+			</p>
 		</div>
 		<div class="kontener">
 			<h3>Fogalom:</h3>
@@ -82,7 +86,8 @@ let betolt_02_jobb_02 = `
 				</li>
 			</ol>
 			<h2>Példa:</h2>
-			<pre><code>
+			<pre>
+				<code>
 H:/ python
 
 Python 3.9.7 (tags/v3.9.7:1016ef3, Aug 30 2021, 20:19:38) [MSC v.1929 64 bit (AMD64)] on win32
@@ -96,7 +101,8 @@ Hello World!
 >>> exit() 
 
 H:/
-			</code></pre>
+				</code>
+			</pre>
 		</div>
 	</div>
 	`;

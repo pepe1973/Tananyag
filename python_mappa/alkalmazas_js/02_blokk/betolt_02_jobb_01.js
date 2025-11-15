@@ -1,6 +1,8 @@
 let betolt_02_jobb_01 = `
 	<h1>Fogalmak 1</h1> 
-    <p>Ebben a részben megismerkedünk a Python programozással kapcsolatos fogalmakkal.</p>
+    <p>
+		Ebben a részben megismerkedünk a Python programozással kapcsolatos fogalmakkal.
+	</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>Fogalom:</h3>
@@ -112,7 +114,8 @@ let betolt_02_jobb_01 = `
 				</li>
 			</ol>
 			<h2>Példa:</h2>
-			<pre><code>
+			<pre>
+				<code>
 H:/ python
 
 Python 3.9.7 (tags/v3.9.7:1016ef3, Aug 30 2021, 20:19:38) [MSC v.1929 64 bit (AMD64)] on win32
@@ -126,7 +129,8 @@ Hello World!
 >>> exit() 
 
 H:/
-			</code></pre>
+				</code>
+			</pre>
 		</div>
 	</div>
 	`;
