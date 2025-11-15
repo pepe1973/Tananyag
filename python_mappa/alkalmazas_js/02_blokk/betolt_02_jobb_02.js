@@ -1,61 +1,31 @@
-let betolt_03 = `
-	<h1>Fogalmak 1</h1> 
+let betolt_02_jobb_02 = `
+	<h1>Fogalmak 2</h1> 
     <p>Ebben a részben megismerkedünk a Python programozással kapcsolatos fogalmakkal.</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">Interpretált:</span> Az interpretált (értelmezett) nyelv egy 
-				olyan programozási nyelv, 
-				amelynek utasításait nem fordítják le előre gépi kóddá, hanem egy 
-				<span class="kiemel">interpreter</span> (értelmező program) 
-				futás közben alakítja át és hajtja végre azokat. Az értelmező program lépésenként 
-				olvassa a forráskódot, és azonnal végre is hajtja az adott utasítást, mielőtt 
-				továbbhaladna a következőre. Ez ellentétben áll a fordított nyelvekkel, amelyeknél a 
-				teljes kódot előbb lefordítják futtatható fájlba, mielőtt elindulna. 
+				<span class="kiemel">Kulcsszó (Keyword):</span> A Python kulcsszavak foglalt szavak fix jelentéssel,
+				amelyek meghatározzák a Python szintaxisát. Nem használhatók névként.
 			</p>
-			<h5>Főbb tulajdonságok:</h5>
-			<ol>
-				<li>
-					<b>Működési elv:</b> Az értelmező (interpreter) lépésről lépésre elemzi és 
-					futtatja a kódot.
-				</li>
-				<li>
-					<b>Példák:</b> Olyan nyelvek, mint a Python vagy a JavaScript, 
-					gyakran interpretált módon működnek, bár léteznek fordított változataik is.
-				</li>
-			</ol>
+			<h5>Milyen kulcsszavak vannak:</h5>
+			<p>
+				<code>import keyword</code>
+			</p>
+			<p>	
+				<code>print(keyword.kwlist)</code>
+			</p>
 		</div>
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
-				<span class="kiemel">Objektumorientált programozás (OOP):</span> egy olyan programozási paradigma, 
-				amely az objektumok fogalmára épül, és az adatok és a hozzájuk tartozó műveletek 
-				összekapcsolását jelenti. Célja a valós világ modellezése, ahol a program egésze olyan 
-				objektumokból épül fel, amelyek rendelkeznek saját jellemzőkkel és működési módszerekkel, 
-				és egymással kölcsönhatásba lépnek. Előnyei közé tartozik a bonyolult kódok egyszerűsítése, 
-				a jobb átláthatóság, a gyorsabb fejlesztés, a könnyebb módosíthatóság és a fokozott adatbiztonság.  
+				<span class="kiemel">Literál:</span> A Pythonban a literálok fix értékek, amelyeket közvetlenül a
+				kódba írnak, és amelyek konstans adatokat képviselnek. Lehetőséget biztosítanak számok, szöveg vagy
+				más lényeges információk tárolására, amelyek a program végrehajtása során nem változnak.
+				A Python különböző típusú literálokat támogat, például numerikus literálokat, karakterlánc-literálokat,
+				logikai literálokat és speciális értékeket, például a None-t.
 			</p>
-			<h5>Főbb tulajdonságok:</h5>
-			<ol>
-				<li>
-					<b>Objektum:</b> Egy egységbe zárt programdarab, amely adatokat (tulajdonságok, mezők) 
-					és az ezeket az adatokat kezelő műveleteket (metódusok, függvények) tartalmazza.
-				</li>
-				<li>
-					<b>Osztály:</b> Az objektumok "tervrajza" vagy sablonja, amely meghatározza, 
-					hogy az azonos típusú objektumok milyen tulajdonságokkal és metódusokkal rendelkeznek majd.
-				</li>
-				<li>
-					<b>Az objektumok csoportosítása:</b> Az OOP a programot egyedi jellemzőkkel bíró, 
-					önmagukban is működő objektumok gyűjteményeként fogja fel.
-				</li>
-				<li>
-					<b>Módszertan (paradigma):</b> Az OOP egy olyan programozási módszertan, 
-					amely az objektumokon alapul, és amely a klasszikus strukturált programozáshoz 
-					képest sokkal rugalmasabb megközelítést kínál. 
-				</li>
-			</ol>
+			<p><a href="https://www.geeksforgeeks.org/python/literals-in-python/" target="_blank">GeeksForGeeks - Literals in Python</a></p>
 		</div>
 		<div class="kontener">
 			<h3>Fogalom:</h3>
@@ -130,3 +100,5 @@ H:/
 		</div>
 	</div>
 	`;
+
+export default betolt_02_jobb_02;

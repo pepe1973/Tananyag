@@ -50,8 +50,8 @@ ol {
 }
 
 ul {
-	list-style-position: inside;
-	list-style-type: square;
+    list-style-position: inside;
+    list-style-type: square;
 }
 
 ol li {

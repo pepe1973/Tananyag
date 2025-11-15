@@ -11,6 +11,11 @@
     top: 3em;
 }
 
+#jobb-kontener .kontener a {
+    display: flex;
+    justify-content: center;
+}
+
 h3 {
     text-decoration: underline;
 }

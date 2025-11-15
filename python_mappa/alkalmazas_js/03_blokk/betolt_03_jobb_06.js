@@ -1,4 +1,4 @@
-let betolt_09 = `
+let betolt_03_jobb_06 = `
 	<h1>Tördelés</h1> 
 	<h5>Feladat: </h5>
     <p>Hozzunk létre példát hosszú sorok tördelésére. Javasolt operátorok (+, -, * stb.) után törni!</p>
@@ -53,3 +53,5 @@ A mondat: Télen húll a hó. Hűvösek a nappalok. Korán nyugszik le a nap.
 		</div>
 	</div>
 	`;
+
+export default betolt_03_jobb_06;

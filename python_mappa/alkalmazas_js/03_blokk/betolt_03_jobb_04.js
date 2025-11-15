@@ -1,17 +1,18 @@
-let betolt_08 = `
-	<h1>Utasítás</h1> 
+let betolt_03_jobb_04 = `
+	<h1>Azonosítók, változók</h1> 
 	<h5>Feladat: </h5>
-    <p>Hozzunk létre példát utasításokra.</p>
+    <p>Hozzunk létre példát a jó változó elnevezésekre!</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>példa:</h3>
 			<pre>
 			<code>
-<span class="komment"># Több utasítás, több sor.</span>
-print("Hello")
-print("World!")
-<span class="komment"># Több utasítás, egy sor. ; elválasztó karakterrel.</span>
-print("Hello"); print("World"); print("again!")
+<span class="komment"># Helyes azonosítók (identifier).</span>
+valtozo1 = "almafa"
+_valtozo = "körtefa"
+Valtozo_2 = "barackfa"
+
+print(valtozo1, _valtozo, Valtozo_2)
 			</code>
 			</pre>
 		</div>
@@ -21,25 +22,22 @@ print("Hello"); print("World"); print("again!")
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/proba</span></code></p>
 				<p><code class="parancs">$ python main.py</code></p>
 				<pre class="parancs">
-Hello
-World!
-Hello 
-World 
-again!
+almafa körtefa barackfa
 				</pre>
 			</div>
 		</div>
 	</div>
 	<h5>Feladat: </h5>
-    <p>Hozzunk létre példát az utasításokra hibával.</p>
+    <p>Hozzunk létre példát a helytelen változó elnevezésekre!</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>példa:</h3>
 			<pre>
 			<code>
-<span class="komment"># Több utasítás, egy sor. Hibával!
-# Nincs elválasztó karakter (sortörés vagy ;)!</span>
-print("Hello") print("World") print("again!")
+<span class="komment"># Helytelen azonosítók (identifier).</span>
+1valtozo = "almafa"
+
+print(1valtozo)
 			</code>
 			</pre>
 		</div>
@@ -49,36 +47,25 @@ print("Hello") print("World") print("again!")
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/proba</span></code></p>
 				<p><code class="parancs">$ python main.py</code></p>
 				<pre class="parancs">
-  File "C:\Users\Peter\Desktop\proba\main.py", line 2
-    print("Hello") print("World") print("again!")
-                   ^
+  File "C:\\Users\\Peter\\Desktop\\proba\\main.py", line 2
+    1valtozo = "almafa"    
+     ^
 SyntaxError: invalid syntax
 				</pre>
 			</div>
 		</div>
 	</div>
 	<h5>Feladat: </h5>
-    <p>Hozzunk létre példát a kódcsomagra.</p>
+    <p>Hozzunk létre példát a helytelen változó elnevezésekre!</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>példa:</h3>
 			<pre>
 			<code>
-<span class="komment"># Fejlécsor!</span>
-def kiir():
-	<span class="komment"># Kódcsomag kezdete!</span>
-	lista = ["alma", "körte"]
-	lista.append("meggy")
-	lista.append("cseresznye")
-	<span class="komment"># Kódcsomag vége!</span>
-	<span class="komment"># Fejlécsor!</span>
-	for elem in lista:
-		<span class="komment"># Kódcsomag kezdete!</span>
-		elem = elem.upper()
-		print(elem)
-		<span class="komment"># Kódcsomag vége!</span>
+<span class="komment"># Helytelen azonosítók (identifier).</span>
+valtozo nev = "almafa"
 
-kiir()
+print(valtozo nev)
 			</code>
 			</pre>
 		</div>
@@ -88,28 +75,25 @@ kiir()
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/proba</span></code></p>
 				<p><code class="parancs">$ python main.py</code></p>
 				<pre class="parancs">
-ALMA
-KÖRTE     
-MEGGY     
-CSERESZNYE
+  File "C:\\Users\\Peter\\Desktop\\proba\\main.py", line 2
+    valtozo nev = "almafa" 
+            ^
+SyntaxError: invalid syntax
 				</pre>
 			</div>
 		</div>
 	</div>
 	<h5>Feladat: </h5>
-    <p>Hozzunk létre példát a kódcsomagra.</p>
+    <p>Hozzunk létre példát a helytelen változó elnevezésekre!</p>
 	<div class="row-3">
 		<div class="kontener">
 			<h3>példa:</h3>
 			<pre>
 			<code>
-<span class="komment"># Ez nem kódcsomag, bár a sorok egyformán vannak behúzva.
-# Nem utasítások és nincs fejlécsor :-tal!</span>
-mondat = "Télen húll a hó. " \\
-	"Hűvösek a nappalok. " \\
-	"Korán nyugszik le a nap." \\
-	"De legalább későn kel."
-print(f"A mondat: {mondat}")
+<span class="komment"># Helytelen azonosítók (identifier).</span>
+valtozo&nev = "almafa"
+
+print(valtozo&nev)
 			</code>
 			</pre>
 		</div>
@@ -119,9 +103,14 @@ print(f"A mondat: {mondat}")
 				<p><code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/proba</span></code></p>
 				<p><code class="parancs">$ python main.py</code></p>
 				<pre class="parancs">
-A mondat: Télen húll a hó. Hűvösek a nappalok. Korán nyugszik le a nap.De legalább későn kel.
+  File "C:\\Users\\Peter\\Desktop\\proba\\main.py", line 2
+    valtozo&nev = "almafa"
+    ^
+SyntaxError: cannot assign to operator
 				</pre>
 			</div>
 		</div>
 	</div>
 	`;
+
+export default betolt_03_jobb_04;

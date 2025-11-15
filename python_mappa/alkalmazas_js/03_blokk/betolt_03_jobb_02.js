@@ -1,4 +1,4 @@
-let betolt_06 = `
+let betolt_03_jobb_02 = `
 	<h1>Behúzás 2</h1> 
 	<h5>Feladat: </h5>
     <p>Hozzunk létre példát a helytelen behúzásra. Nincs behúzás!</p>
@@ -62,3 +62,5 @@ TabError: inconsistent use of tabs and spaces in indentation
 		</div>
 	</div>
 	`;
+
+export default betolt_03_jobb_02;
