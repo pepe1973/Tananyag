@@ -103,7 +103,7 @@ let betolt_04_jobb_02 = `
 					és a <span class="kiemel">backend</span> közötti kommunikációt.
 				</li>
 				<li>
-					<code>import cakesFrontendRouter from './routes/cakes/cakesRoutesFrontend.mjs'</code>
+					<code>import cakesFrontendRouter from './routes/cakes/cakesRoutesFrontend.mjs';</code>
 					- importáljuk be az előbb létrehozott
 					<code>router</code>-t a megfelelő állományból.
 				</li>
