@@ -11,8 +11,17 @@
     top: 3em;
 }
 
+#jobb-kontener .kontener a {
+    display: inline;
+    /* justify-content: center; */
+}
+
 h3 {
     text-decoration: underline;
+}
+
+a {
+    color: var(--kek);
 }
 
 code {
@@ -25,13 +34,13 @@ pre {
     font-weight: bold;
 }
 
-.kiemel {
+.komment {
     color: var(--piros);
+    font-weight: bold;
 }
 
-.keret {
-    border: 1px solid var(--piros);
-    padding: 1em;
+.kiemel {
+    color: var(--piros);
 }
 
 .git-lila {

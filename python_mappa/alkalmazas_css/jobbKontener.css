@@ -12,8 +12,8 @@
 }
 
 #jobb-kontener .kontener a {
-    display: flex;
-    justify-content: center;
+    display: inline;
+    /* justify-content: center; */
 }
 
 h3 {
