@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/cakes/cakes.css"
+        />
+        <title>Torták</title>
+    </head>
+    <body>
+        <%- include('../nav.ejs') %>
+        <div id="torta-kontener">
+            <h1>Torták</h1>
+            <p><a href="/api/new-cake">Új torta felvétele</a></p>
+            <div id="tortak-kontener">
+                <% cakes.forEach(elem => { %>
+                <div class="torta-kontener">
+                    <h1><%= elem.nev %></h1>
+                    <h5>Ár: <%= elem.ar %> Ft</h5>
+                    <div class="torta-kepek">
+                        <% elem.kepek.forEach(item => { %>
+                        <div class="torta-kep">
+                            <img
+                                src="<%= item %>"
+                                alt="<%= item %>"
+                            />
+                        </div>
+                        <% }) %>
+                    </div>
+                    <p><%= elem.leiras %></p>
+                    <div id="torta-gombok">
+                        <a href="/api/cakes-backend/<%= elem._id %>">Lekérés</a>
+                        <button onclick="torol('<%= elem._id %>')">
+                            Törlés
+                        </button>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </div>
+        <script src="/js/tortak.mjs"></script>
+    </body>
+</html>

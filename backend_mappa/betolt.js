@@ -1,98 +1,99 @@
-const betoltTomb = [];
+import { balOldal, jobbOldal, jobbOldalLenyit } from './oldalak.js';
 
-betoltTomb.push(
-    betolt_00, 
-    betolt_01, 
-    betolt_02, 
-    betolt_03,
-    betolt_04,
-    betolt_05,
-    betolt_06,
-    betolt_07,
-    betolt_08,
-    betolt_09,
-    betolt_10,
-    betolt_11,
-    betolt_12,
-    betolt_13,
-    betolt_14,
-    betolt_15,
-    betolt_16,
-    betolt_17,
-    betolt_18,
-    betolt_19,
-    betolt_20,
-    betolt_21,
-    betolt_22,
-    betolt_23,
-    betolt_24,
-    betolt_25,
-    betolt_26,
-    betolt_27,
-    betolt_28,
-    betolt_29,
-    betolt_30,
-    betolt_31,
-    betolt_32,
-    betolt_33,
-    betolt_34,
-    betolt_35,
-    betolt_36,
-    betolt_37,
-    betolt_38
-);
+let balLista = document.querySelector('#bal-lista');
+let jobbKontener = document.querySelector('#jobb-kontener');
 
-const jobbKontener = document.querySelector('#jobb-kontener');
-const gombok = document.querySelectorAll('button');
-const marad = document.querySelectorAll('.marad');
-const rejt = document.querySelectorAll('.rejt');
-const nyit = document.querySelectorAll('.nyit');
-const elrejt = document.querySelectorAll('.elrejt');
+window.addEventListener('load', () => {
+    balLista.innerHTML = balOldal;
+    jobbKontener.innerHTML = jobbOldal[0];
 
-for (let i = 0; i < elrejt.length; i++) {
-    elrejt[i].style.display = 'none';
-}
+    const nyit = document.querySelectorAll('.nyit');
+    const lenyit = document.querySelectorAll('.lenyit');
+    const elrejt = document.querySelectorAll('.elrejt');
+    const rejt = document.querySelectorAll('.rejt');
+    const marad = document.querySelectorAll('.marad');
 
-function alap_betolt() {
-    jobbKontener.innerHTML = betoltTomb[0];
-    nyit[0].style.backgroundColor = 'var(--piros)';
-}
-
-function betolt(index, zar) {
-    if (zar === 'igen') {
-        elrejt.forEach((elem) => {
-            elem.style.display = 'none';
-        });
+    for (let i = 0; i < elrejt.length; i++) {
+        elrejt[i].style.display = 'none';
     }
 
-    marad.forEach((element) => {
-        element.style.backgroundColor = 'var(--liZold)';
-    });
-    rejt.forEach((element) => {
-        element.style.backgroundColor = 'var(--liHalvanyZold)';
-    });
+    betolt(nyit, marad, rejt, elrejt, jobbKontener);
 
-    nyit[index].style.backgroundColor = 'var(--piros)';
-    jobbKontener.innerHTML = betoltTomb[index];
+    kinyit(lenyit, marad, elrejt, jobbKontener);
+
+    kinyit_listaelem(lenyit, jobbKontener);
+
+    nyit[0].style.backgroundColor = 'var(--piros)';
+});
+
+function betolt(lista_nyit, lista_marad, lista_rejt, lista_elrejt, jobb) {
+    for (let i = 0; i < lista_nyit.length; i++) {
+        lista_nyit[i].addEventListener('click', () => {
+            lista_marad.forEach((elem) => {
+                elem.style.backgroundColor = 'var(--liZold)';
+            });
+
+            lista_elrejt.forEach((elem) => {
+                elem.style.display = 'none';
+            });
+
+            lista_rejt.forEach((elem) => {
+                elem.style.backgroundColor = 'var(--liHalvanyZold)';
+            });
+
+            for (let j = 0; j < lista_nyit.length; j++) {
+                if (i === j) {
+                    lista_nyit[j].style.backgroundColor = 'var(--piros)';
+                } else {
+                    lista_nyit[j].style.backgroundColor = 'var(--liZold)';
+                }
+            }
+            jobb.innerHTML = jobbOldal[i];
+        });
+    }
 }
 
-function kinyit(index, ssz, mssz) {
-    for (let i = 0; i < elrejt.length; i++) {
-        if (i !== index) {
-            elrejt[i].style.display = 'none';
+function kinyit(lista_lenyit, lista_marad, lista_elrejt, jobb) {
+    for (let i = 0; i < lista_lenyit.length; i++) {
+        lista_lenyit[i].addEventListener('click', () => {
+            lista_marad.forEach((elem) => {
+                elem.style.backgroundColor = 'var(--liZold)';
+            });
+
+            for (let j = 0; j < lista_lenyit.length; j++) {
+                if (i === j) {
+                    if (lista_elrejt[j].style.display === 'block')
+                        lista_elrejt[j].style.display = 'none';
+                    else if (lista_elrejt[j].style.display === 'none')
+                        lista_elrejt[j].style.display = 'block';
+                } else {
+                    lista_elrejt[j].style.display = 'none';
+                }
+            }
+
+            let rejt = document.querySelectorAll(`.rejt_${i}`);
+
+            jobb.innerHTML = jobbOldalLenyit[i][0];
+            rejt[0].style.backgroundColor = 'var(--piros)';
+            for (let j = 1; j < rejt.length; j++) {
+                rejt[j].style.backgroundColor = 'var(--liHalvanyZold)';
+            }
+        });
+    }
+}
+
+function kinyit_listaelem(lista_lenyit, jobb) {
+    for (let i = 0; i < lista_lenyit.length; i++) {
+        let rejt = document.querySelectorAll(`.rejt_${i}`);
+
+        for (let k = 0; k < rejt.length; k++) {
+            rejt[k].addEventListener('click', () => {
+                jobb.innerHTML = jobbOldalLenyit[i][k];
+                for (let j = 0; j < rejt.length; j++) {
+                    if (k === j) rejt[j].style.backgroundColor = 'var(--piros)';
+                    else rejt[j].style.backgroundColor = 'var(--liHalvanyZold)';
+                }
+            });
         }
     }
-
-    for (let i = 0; i < marad.length; i++) {
-        marad[i].style.backgroundColor = 'var(--liZold)';
-    }
-
-    if (elrejt[index].style.display === 'none') {
-        elrejt[index].style.display = 'block';
-        rejt.forEach((element) => {
-            element.style.backgroundColor = 'var(--liHalvanyZold)';
-        });
-        rejt[mssz].style.backgroundColor = 'var(--piros)';
-        jobbKontener.innerHTML = betoltTomb[ssz];
-    } else elrejt[index].style.display = 'none';
 }

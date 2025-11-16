@@ -1,0 +1,13 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Cukrászda weboldal",
+    "main": "server.mjs",
+    "scripts": {
+        "start": "node server.mjs"
+    },
+    "keywords": [],
+    "author": "SZBI",
+    "license": "MIT",
+    "type": "module"
+}

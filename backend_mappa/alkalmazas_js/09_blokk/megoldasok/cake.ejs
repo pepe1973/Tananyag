@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="/css/cakes/cakes.css"
+        />
+        <title>Torta</title>
+    </head>
+    <body>
+        <%- include('../nav.ejs') %>
+        <div id="torta-kontener">
+            <h1>Torta</h1>
+            <div class="torta-kontener">
+                <form>
+                    <input
+                        type="hidden"
+                        id="id"
+                        value="<%= cake._id %>"
+                    />
+                    <table>
+                        <tr>
+                            <td>Név:</td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="nev"
+                                    value="<%= cake.nev %>"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ár:</td>
+                            <td>
+                                <input
+                                    type="number"
+                                    id="ar"
+                                    value="<%= cake.ar %>"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Leírás:</td>
+                            <td>
+                                <textarea id="leiras">
+<%= cake.leiras %></textarea
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kép 1:</td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="kep1"
+                                    value="<%= cake.kepek[0] %>"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kép 2:</td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="kep2"
+                                    value="<%= cake.kepek[1] %>"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Kép 3:</td>
+                            <td>
+                                <input
+                                    type="text"
+                                    id="kep3"
+                                    value="<%= cake.kepek[2] %>"
+                                />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button onclick="modositas(event)">
+                                    Módosítás
+                                </button>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <script src="/js/torta.mjs"></script>
+    </body>
+</html>
