@@ -9,6 +9,9 @@ let betolt_00_jobb = `
 	<p>
 		Ajánlott az adott sorrendben végigmenni az anyagon, mert egymásra épül(het)nek a különböző fogalmak.
 	</p>
+	<p>
+		<span class="kiemel">A kódot tartalmazó képre kattintva a forrásállomány letölthető!</span>	
+	</p>
 	<h5>Források:</h5>
 	<ul>
 		<li>

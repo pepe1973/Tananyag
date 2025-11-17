@@ -1,5 +1,5 @@
-let betolt_07_jobb_05 = `
-	<h1>A <code>routes/cakes</code> mappában lévő <code>cakesRoutesBackend.mjs</code> állomány szerkesztése</h1> 
+let betolt_10_jobb_05 = `
+	<h1>A <code>routes/users</code> mappában lévő <code>usersRoutesBackend.mjs</code> állomány szerkesztése</h1> 
     <p>
 		Ebben a lépésben az <span class="kiemel">MVC</span>-vel összefüggésben létrehozzuk a fenti állományt.
 		Ebben fogjuk össze a <span class="kiemel">CRUD</span> műveleteket.
@@ -30,31 +30,31 @@ let betolt_07_jobb_05 = `
 					<code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/routes</span></code>
 				</p>
 				<p>
-					<code class="parancs">$ mkdir cakes</code>
+					<code class="parancs">$ mkdir users</code>
 				</p>
 				<p>
 					<code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/routes</span></code>
 				</p>
 				<p>
-					<code class="parancs">$ cd cakes</code>
+					<code class="parancs">$ cd users</code>
 				</p>
 				<p>
-					<code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/routes/cakes</span></code>
+					<code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/routes/users</span></code>
 				</p>
 				<p>
-					<code class="parancs">$ touch cakesRoutesBackend.mjs</code>
+					<code class="parancs">$ touch usersRoutesBackend.mjs</code>
 				</p>
 			</div>
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<code>cakesRoutesBackend.mjs</code>
-			<a href="./alkalmazas_js/07_blokk/megoldasok/cakesRoutesBackend.mjs" download>
-				<img src="./alkalmazas_js/07_blokk/images/kep_06.png" title="A képre kattintva a kód letölthető!" />
+			<code>usersRoutesBackend.mjs</code>
+			<a href="./alkalmazas_js/10_blokk/megoldasok/usersRoutesBackend.mjs" download>
+				<img src="./alkalmazas_js/10_blokk/images/kep_06.png" title="A képre kattintva a kód letölthető!" />
 			</a>
 			<code>server.mjs</code>
-			<a href="./alkalmazas_js/07_blokk/megoldasok/server.mjs" download>
-				<img src="./alkalmazas_js/07_blokk/images/kep_07.png" title="A képre kattintva a kód letölthető!" />
+			<a href="./alkalmazas_js/10_blokk/megoldasok/server.mjs" download>
+				<img src="./alkalmazas_js/10_blokk/images/kep_07.png" title="A képre kattintva a kód letölthető!" />
 			</a>
 		</div>
 		<div class="kontener">
@@ -72,22 +72,22 @@ let betolt_07_jobb_05 = `
 				Ehhez adjuk ki a <code>cd routes</code> utasítást a parancssorban. 
 			</p>
 			<p>
-				A <code>routes</code> mappában hozzunk létre egy <code>cakes</code> nevű mappát.
+				A <code>routes</code> mappában hozzunk létre egy <code>users</code> nevű mappát.
 			</p>
 			<p>
-				Ehhez adjuk ki a <code>mkdir cakes</code> utasítást a parancssorban. 
+				Ehhez adjuk ki a <code>mkdir users</code> utasítást a parancssorban. 
 			</p>
 			<p>
-				Lépjünk be a <code>cakes</code> mappába.
+				Lépjünk be a <code>users</code> mappába.
 			</p>
 			<p>
-				Ehhez adjuk ki a <code>cd cakes</code> utasítást a parancssorban. 
+				Ehhez adjuk ki a <code>cd users</code> utasítást a parancssorban. 
 			</p>
 			<p>
-				A <code>cakes</code> mappában hozzunk létre egy <code>cakesRoutesBackend.mjs</code> nevű állományt.
+				A <code>users</code> mappában hozzunk létre egy <code>usersRoutesBackend.mjs</code> nevű állományt.
 			</p>
 			<p>
-				Ehhez adjuk ki a <code>touch cakesRoutesBackend.mjs</code> utasítást a parancssorban. 
+				Ehhez adjuk ki a <code>touch usersRoutesBackend.mjs</code> utasítást a parancssorban. 
 			</p>
 			<p>
 				Csak a <span class="kiemel">Git Bash</span> felületen működik!
@@ -96,33 +96,29 @@ let betolt_07_jobb_05 = `
 		<div class="kontener">
 			<h3>Magyarázat:</h3>
 			<p>
-				A <code>cakesRoutesBackend.mjs</code> állomány
+				A <code>usersRoutesBackend.mjs</code> állomány
 				szerkesztése.
 			</p>
 			<ol>
 				<li>
-					<code>import pictureDeleter from '../../middlewares/pictureDeleteFromCloudinary.mjs';</code> -
-					a <code>pictureDeleter</code> <span class="kiemel">middleware</span> meghívása az adott állományból
-				</li>
-				<li>
-					<code>import { deleteOneCakeBackend, getAllCakesBackend, getOneCakeBackend } from '../../controllers/cakes/cakesControllersBackend.mjs';</code>
-					- hívjuk meg a <code>deleteOneCakeBackend</code>, <code>getAllCakesBackend</code> és <code>getOneCakeBackend</code> 
+					<code>import { deleteOneUserBackend, getAllUsersBackend, updateOneUserBackend } from '../../controllers/users/usersControllersBackend.mjs';</code>
+					- hívjuk meg a <code>deleteOneUserBackend</code>, <code>getAllusersBackend</code> és <code>updateOneUserBackend</code> 
 					függvényeket a megfelelő állományból.
 				</li>
 				<li>
-					<code>router.get('/', getAllCakesBackend);</code> -
+					<code>router.get('/', getAllusersBackend);</code> -
 					a <code>HTTP GET</code> metódus (<span class="kiemel">CRUD Read</span>) művelet megvalósítása a
-					<code>getAllCakesBackend</code> függvénnyel.
+					<code>getAllusersBackend</code> függvénnyel.
 				</li>
 				<li>
-					<code>router.get('/:id', getOneCakeBackend);</code> -
-					a <code>HTTP GET ONE</code> metódus (<span class="kiemel">CRUD Read</span>) művelet megvalósítása a
-					<code>getOneCakeBackend</code> függvénnyel.
+					<code>router.put('/', updateOneUserBackend);</code> -
+					a <code>HTTP PUT</code> metódus (<span class="kiemel">CRUD Update</span>) művelet megvalósítása a
+					<code>updateOneUserBackend</code> függvénnyel.
 				</li>
 				<li>
-					<code>router.delete('/:id', pictureDeleter, deleteOneCakeBackend);</code> -
+					<code>router.delete('/:id', deleteOneUserBackend);</code> -
 					a <code>HTTP DELETE</code> metódus (<span class="kiemel">CRUD Delete</span>) művelet megvalósítása a
-					<code>deleteOneCakeBackend</code> függvénnyel.
+					<code>deleteOneUserBackend</code> függvénnyel.
 				</li>
 			</ol>
 			<p>
@@ -135,15 +131,15 @@ let betolt_07_jobb_05 = `
 					<code>express.json()</code> <span class="kiemel">middleware</span>-t a böngészőtől kapott <code>HTTP req.body</code> kicsomagolására.
 				</li>
 				<li>
-					<code>import cakesRouter from './routes/cakes/cakesRoutesBackend.mjs';</code>
+					<code>import usersRouter from './routes/users/usersRoutesBackend.mjs';</code>
 					- importáljuk be az előbb létrehozott
 					<code>router</code>-t a megfelelő állományból.
 				</li>
 				<li>
-					<code>app.use('/api/cakes-backend', cakesRouter);</code> - a
+					<code>app.use('/api/users-backend', usersRouter);</code> - a
 					<code>use</code>
 					<span class="kiemel">middleware</span> segítségével
-					dolgozzuk ki a <code>/api/cakes-backend</code> -
+					dolgozzuk ki a <code>/api/users-backend</code> -
 					<span class="kiemel">route</span>-ot.
 				</li>
 			</ol>
@@ -151,4 +147,4 @@ let betolt_07_jobb_05 = `
 	</div>
 	`;
 
-export default betolt_07_jobb_05;
+export default betolt_10_jobb_05;

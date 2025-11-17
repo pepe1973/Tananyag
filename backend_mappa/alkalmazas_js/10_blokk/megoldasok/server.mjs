@@ -1,0 +1,57 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+import path from 'node:path';
+import express from 'express';
+import ejs from 'ejs';
+import cors from 'cors';
+
+const PORT = process.env.PORT || 3500;
+const app = express();
+
+const dir = import.meta.dirname;
+app.use(express.static(path.resolve(dir, 'public')));
+app.set('view engine', ejs);
+app.use(express.json());
+app.use(cors());
+
+import dbConnect from './utils/dbConnection.mjs';
+
+dbConnect()
+    .then(() => {
+        console.log('Sikeres adatbázis csatlakozás!');
+        app.listen(PORT, () => {
+            console.log(`http://localhost:${PORT}/api`);
+        });
+    })
+    .catch((error) => {
+        console.error(`A hiba oka: ${error.message}`);
+    });
+
+import mainRouter from './routes/mainRoutesBackend.mjs';
+app.use('/api', mainRouter);
+
+import cakesRouter from './routes/cakes/cakesRoutesBackend.mjs';
+app.use('/api/cakes-backend', cakesRouter);
+
+import cakesFrontendRouter from './routes/cakes/cakesRoutesFrontend.mjs';
+app.use('/api/cakes-frontend', cakesFrontendRouter);
+
+import newCakeRouter from './routes/cakes/newCakeRoutes.mjs';
+app.use('/api/new-cake', newCakeRouter);
+
+import oneCakeRouter from './routes/cakes/oneCakeRoutesBackend.mjs';
+app.use('/api/one-cake-backend', oneCakeRouter);
+
+import usersRouter from './routes/users/usersRoutesBackend.mjs';
+app.use('/api/users-backend', usersRouter);
+
+app.use((req, res) => {
+    try {
+        res.statusCode = 404;
+        return res.render('404.ejs');
+    } catch (error) {
+        res.statusCode = 500;
+        return res.json({ msg: 'Általános szerver hiba!' });
+    }
+});

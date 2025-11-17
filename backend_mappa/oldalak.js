@@ -18,6 +18,8 @@ import betolt_08_bal from './alkalmazas_js/08_blokk/betolt_08_bal.js';
 import betolt_08_jobb from './alkalmazas_js/08_blokk/betolt_08_jobb.js';
 import betolt_09_bal from './alkalmazas_js/09_blokk/betolt_09_bal.js';
 import betolt_09_jobb from './alkalmazas_js/09_blokk/betolt_09_jobb.js';
+import betolt_10_bal from './alkalmazas_js/10_blokk/betolt_10_bal.js';
+import betolt_10_jobb from './alkalmazas_js/10_blokk/betolt_10_jobb.js';
 
 let balOldal = betolt_00_bal;
 balOldal += betolt_01_bal;
@@ -29,6 +31,7 @@ balOldal += betolt_06_bal;
 balOldal += betolt_07_bal;
 balOldal += betolt_08_bal;
 balOldal += betolt_09_bal;
+balOldal += betolt_10_bal;
 
 let jobbOldal = [];
 jobbOldal.push(betolt_00_jobb);
@@ -43,5 +46,6 @@ jobbOldalLenyit.push(betolt_05_jobb);
 jobbOldalLenyit.push(betolt_07_jobb);
 jobbOldalLenyit.push(betolt_08_jobb);
 jobbOldalLenyit.push(betolt_09_jobb);
+jobbOldalLenyit.push(betolt_10_jobb);
 
 export { balOldal, jobbOldal, jobbOldalLenyit };

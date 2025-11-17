@@ -18,6 +18,9 @@ let betolt_00_jobb = `
 	<p>
 		Majd megnézzük hogyan kell egy alap React alkalmazást létrehozni.
 	</p>
+	<p>
+		<span class="kiemel">A kódot tartalmazó képre kattintva a forrásállomány letölthető!</span>	
+	</p>
 	`;
 
 export default betolt_00_jobb;
