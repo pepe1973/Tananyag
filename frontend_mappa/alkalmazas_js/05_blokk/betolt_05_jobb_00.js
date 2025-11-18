@@ -1,7 +1,7 @@
 let betolt_05_jobb_00 = `
 	<h1>Regisztráció - Összefoglaló</h1> 
     <p>
-		Ebben a részben felhasználókat fogunk registrálni.
+		Ebben a részben felhasználókat fogunk regisztrálni.
 	</p>
 	<h5>Lépés 1:</h5>
 	<p

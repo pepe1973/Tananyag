@@ -126,11 +126,6 @@ let betolt_10_jobb_05 = `
 			</p>
 			<ol>
 				<li>
-					<code>app.use(express.json());</code>
-					- használjuk az
-					<code>express.json()</code> <span class="kiemel">middleware</span>-t a böngészőtől kapott <code>HTTP req.body</code> kicsomagolására.
-				</li>
-				<li>
 					<code>import usersRouter from './routes/users/usersRoutesBackend.mjs';</code>
 					- importáljuk be az előbb létrehozott
 					<code>router</code>-t a megfelelő állományból.

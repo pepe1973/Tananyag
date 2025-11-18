@@ -1,4 +1,4 @@
-let betolt_04_jobb_03 = `
+let betolt_05_jobb_03 = `
 	<h1>Az <code>src/pages/Register</code> mappában lévő <code>Register.jsx</code> állomány szerkesztése</h1> 
     <p>
 		Ebben a lépésben létrehozzuk, és szerkesztjük a <code>Register.jsx</code> állományt. 
@@ -110,4 +110,4 @@ let betolt_04_jobb_03 = `
 	</div>
 	`;
 
-export default betolt_04_jobb_03;
+export default betolt_05_jobb_03;

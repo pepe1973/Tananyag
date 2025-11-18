@@ -1,5 +1,5 @@
-let betolt_05_jobb_02 = `
-	<h1>A <code>routes/users</code> mappában lévő <code>userRegisterRoutes.mjs</code> állomány szerkesztése</h1> 
+let betolt_06_jobb_02 = `
+	<h1>A <code>routes/users</code> mappában lévő <code>userLoginRoutes.mjs</code> állomány szerkesztése</h1> 
     <p>
 		Ebben a lépésben az <span class="kiemel">MVC</span>-vel összefüggésben létrehozzuk a fenti állományt. Ebben fogjuk össze
 		a <span class="kiemel">CRUD</span> műveleteket.
@@ -36,21 +36,21 @@ let betolt_05_jobb_02 = `
 					<code>User@ALAP-SZAMITOGEP <span class="git-lila">MINGW64</span> <span class="git-sar">~/Desktop/Cukraszda/backend/routes/users</span></code>
 				</p>
 				<p>
-					<code class="parancs">$ touch userRegisterRoutes.mjs</code>
+					<code class="parancs">$ touch userLoginRoutes.mjs</code>
 				</p>
 			</div>
 		</div>
 		<div class="kontener">
 			<h3>Visual Studio Code:</h3>
-			<code>userRegisterRoutes.mjs</code>
-			<a href="./alkalmazas_js/05_blokk/megoldasok/userRegisterRoutes.mjs" download>
-				<img src="./alkalmazas_js/05_blokk/images/kep_02.png" title="A képre kattintva a kód letölthető!" />
+			<code>userLoginRoutes.mjs</code>
+			<a href="./alkalmazas_js/06_blokk/megoldasok/userLoginRoutes.mjs" download>
+				<img src="./alkalmazas_js/06_blokk/images/kep_02.png" title="A képre kattintva a kód letölthető!" />
 			</a>
 			<p>
 				<code>server.mjs</code>
 			</p>
-			<a href="./alkalmazas_js/05_blokk/megoldasok/server.mjs" download>
-				<img src="./alkalmazas_js/05_blokk/images/kep_03.png" title="A képre kattintva a kód letölthető!" />
+			<a href="./alkalmazas_js/06_blokk/megoldasok/server.mjs" download>
+				<img src="./alkalmazas_js/06_blokk/images/kep_03.png" title="A képre kattintva a kód letölthető!" />
 			</a>
 		</div>
 		<div class="kontener">
@@ -74,10 +74,10 @@ let betolt_05_jobb_02 = `
 				Ehhez adjuk ki a <code>cd users</code> utasítást a parancssorban. 
 			</p>
 			<p>
-				Hozzunk létre egy <code>userRegisterRoutes.mjs</code> nevű állományt.
+				Hozzunk létre egy <code>userLoginRoutes.mjs</code> nevű állományt.
 			</p>
 			<p>
-				Ehhez adjuk ki a <code>touch userRegisterRoutes.mjs</code> utasítást a parancssorban. 
+				Ehhez adjuk ki a <code>touch userLoginRoutes.mjs</code> utasítást a parancssorban. 
 			</p>
 			<p>
 				Csak a <span class="kiemel">Git Bash</span> felületen működik!
@@ -87,15 +87,15 @@ let betolt_05_jobb_02 = `
 			<h3>Magyarázat:</h3>
 			<ol>
 				<li>
-					<code>import userRegisterRouter from './routes/users/userRegisterRoutes.mjs';</code>
+					<code>import userLoginRouter from './routes/users/userLoginRoutes.mjs';</code>
 					- importáljuk be az előbb létrehozott
 					<code>router</code>-t a megfelelő állományból.
 				</li>
 				<li>
-					<code>app.use('/api/register-frontend', userRegisterRouter);</code> - a
+					<code>app.use('/api/Login-frontend', userLoginRouter);</code> - a
 					<code>use</code>
 					<span class="kiemel">middleware</span> segítségével
-					dolgozzuk ki a <code>/api/register-frontend</code> -
+					dolgozzuk ki a <code>/api/login-frontend</code> -
 					<span class="kiemel">route</span>-ot.
 				</li>
 			</ol>
@@ -103,4 +103,4 @@ let betolt_05_jobb_02 = `
 	</div>
 	`;
 
-export default betolt_05_jobb_02;
+export default betolt_06_jobb_02;
