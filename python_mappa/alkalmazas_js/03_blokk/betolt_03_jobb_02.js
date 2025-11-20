@@ -20,7 +20,7 @@ let betolt_03_jobb_02 = `
 					<code class="parancs">$ python main.py</code>
 				</p>
 				<pre class="parancs">
-  File "C:\\Users\\Peter\\Desktop\\proba\\main.py", line 2
+  File "C:\\Users\\Peter\\Desktop\\proba\\main.py", line 4
     if i % 2 == 0:
     ^
 IndentationError: expected an indented block
@@ -48,7 +48,7 @@ IndentationError: expected an indented block
 					<code class="parancs">$ python main.py</code>
 				</p>
 				<pre class="parancs">
-  File "C:\Users\Peter\Desktop\proba\main.py", line 4
+  File "C:\Users\Peter\Desktop\proba\main.py", line 6
     print(k)
 TabError: inconsistent use of tabs and spaces in indentation
 				</pre>

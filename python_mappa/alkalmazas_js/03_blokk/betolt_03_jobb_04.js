@@ -27,7 +27,7 @@ almafa körtefa barackfa
 	</div>
 	<h5>Feladat: </h5>
     <p>
-		Hozzunk létre példát a helytelen változó elnevezésekre!
+		Hozzunk létre példát a helytelen változó elnevezésekre! <span class="kiemel">Számmal nem kezdődhet!</span>
 	</p>
 	<div class="row-3">
 		<div class="kontener">
@@ -51,7 +51,7 @@ SyntaxError: invalid syntax
 	</div>
 	<h5>Feladat: </h5>
     <p>
-		Hozzunk létre példát a helytelen változó elnevezésekre!
+		Hozzunk létre példát a helytelen változó elnevezésekre! <span class="kiemel">Nem tartalmazhat szóközöket!</span>
 	</p>
 	<div class="row-3">
 		<div class="kontener">
@@ -80,6 +80,7 @@ SyntaxError: invalid syntax
 	<h5>Feladat: </h5>
     <p>
 		Hozzunk létre példát a helytelen változó elnevezésekre!
+		<span class="kiemel">Nem tartalmazhat meg nem engedett karaktereket!</span>
 	</p>
 	<div class="row-3">
 		<div class="kontener">

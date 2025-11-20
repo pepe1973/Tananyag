@@ -87,7 +87,7 @@ CSERESZNYE
 	</div>
 	<h5>Feladat: </h5>
     <p>
-		Hozzunk létre példát a kódcsomagra.
+		Hozzunk létre példát ahol a behúzások nem jelentenek kódcsomagot.
 	</p>
 	<div class="row-3">
 		<div class="kontener">

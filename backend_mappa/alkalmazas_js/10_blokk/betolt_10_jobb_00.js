@@ -1,5 +1,5 @@
 let betolt_10_jobb_00 = `
-	<h1>/api/cakes-backend route kidolgozása - Összefoglaló</h1> 
+	<h1>/api/users-backend route kidolgozása - Összefoglaló</h1> 
     <p>
 		Ebben a részben kidolgozzuk az <code>/api/users-backend</code> <span class="kiemel">route</span>-hoz tartozó
 		<span class="kiemel">CRUD</span> műveleteket.

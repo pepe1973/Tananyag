@@ -1,5 +1,7 @@
 # Hosszú sor tördelése.
-osszeg = 36 + \
-	45 + \
-	72
-print(f"Az összeg: {osszeg}")
+mondat = "Télen hull a hó. " \
+	"Hűvösek a nappalok. " \
+	"Korán nyugszik le a nap." \
+	"De legalább későn kel."
+
+print(f"A mondat: {mondat}")
