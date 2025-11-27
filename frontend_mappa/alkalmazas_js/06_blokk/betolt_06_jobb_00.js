@@ -1,4 +1,4 @@
-let betolt_05_jobb_00 = `
+let betolt_06_jobb_00 = `
 	<h1>Login/logout - Összefoglaló</h1> 
     <p>
 		Ebben a részben felhasználókat fogunk beléptetni és kiléptetni.
@@ -17,4 +17,4 @@ let betolt_05_jobb_00 = `
 	</p>
 	`;
 
-export default betolt_05_jobb_00;
+export default betolt_06_jobb_00;

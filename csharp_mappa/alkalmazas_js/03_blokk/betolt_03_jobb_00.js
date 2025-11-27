@@ -1,0 +1,79 @@
+let betolt_03_jobb_00 = `
+	<h1>Szintaxis - Összefoglaló</h1> 
+    <p>
+		Ebben a részben megismerkedünk a Python programozás szintaxisának szabályaival.
+	</p>
+	<h5>Behúzás (indentation):</h5>
+	<p>
+		A behúzás a kódsor elején található szóközöket jelenti.
+	</p>
+	<p>
+		A Python behúzást használ a kódblokkok jelölésére.
+	</p>
+	<p>
+		A Python hibát jelez, ha kihagyod a behúzást!
+	</p>
+	<p>
+		A szóközök számát programozóként te döntöd el, a leggyakoribb használat a négy, de legalább egyre van szükség.
+	</p>
+	<p>
+		Ugyanannyi szóközt kell használnod ugyanabban a kódblokkban, különben a Python hibát jelez!
+	</p>
+	<h5>Komment (comment):</h5>
+	<p>A Python kommentálási képességgel rendelkezik a kódon belüli dokumentáció céljából.</p>
+	<p>A kommentek <code>#</code> karakterrel kezdődnek , és a Python a sor többi részét kommentként jeleníti meg.</p>
+	<p>A kommentek segítségével elmagyarázhatók a Python kódok.</p>
+	<p>A kód tesztelésekor kommentek használhatók a végrehajtás megakadályozására.</p>
+	<p>A Pythonnak nincs igazán szintaxisa a többsoros megjegyzésekhez. 
+	Többsoros megjegyzés hozzáadásához minden sorhoz beszúrhat egy <code>#</code>-et.</p>
+	<p>Mivel a Python figyelmen kívül hagyja a változóhoz nem rendelt karakterlánc literálokat, hozzáadhatsz egy többsoros karakterláncot 
+	(tripla idézőjelek: """) a kódodhoz, és ebbe helyezheted el a kommentedet.</p>
+	<h5>Azonosítók, változók:</h5>
+	<p>Az a név, amellyel egy függvényt (function), modult (module), osztályt (class), változót (variable) vagy bármilyen más objektumot azonosítasz,
+	az az <span class="kiemel">azonosító</span> (<span class="kiemel">identifier</span>).</p>
+	<p>Az azonosítók létrehozására bizonyos szabályok vonatkoznak:</p>
+	<ul>
+		<li>Az azonosító kezdődhet betűvel: AZ vagy az.</li>
+		<li>Kezdődhet aláhúzás karakterrel.</li>
+		<li>Nem kezdődhet számmal vagy más speciális karakterrel.</li>
+		<li>Az azonosító csak alfanumerikus karaktereket és aláhúzásjelet tartalmazhat, feltéve, hogy nem számmal kezdődik.</li>
+		<li>És a változók megkülönböztetik a kis- és nagybetűket, tehát az Apple és az apple két különböző változó.</li>
+		<li>Az azonosítók nem lehetnek <span class="kiemel">kulcsszavak</span> (<span class="kiemel">keyword</span>).</li>
+	</ul>
+	<p>Ha Pythonban értékeket szeretnénk tárolni egy memóriahelyen, Python <span class="kiemel">változó</span>kat
+	(<span class="kiemel">variable</span>) használunk.</p>
+	<p>Pythonban nem kell az <span class="kiemel">adattípus</span> alapján definiálnunk a változót, a Python értelmező maga teszi ezt meg.</p>
+	<p>Az értelmező azt is eldönti, hogy hol foglalja le a memóriát az adattípus alapján.</p>
+	<p>Az egynél több szót tartalmazó változónevek nehezen olvashatók. Az egynél több szót tartalmazó változónevek nehezen olvashatók.</p>
+	<ul>
+		<li><b>Camel Case:</b> Minden szó, az első kivételével, nagybetűvel kezdődik: <code>myVariableName = "John"</code></li>
+		<li><b>Pascal Case:</b> Minden szó nagybetűvel kezdődik: <code>MyVariableName = "John"</code></li>
+		<li><b>Snake Case:</b> Minden szót aláhúzásjel választ el: <code>my_variable_name = "John"</code></li>
+	</ul>
+	<h5>Utasítás (statement):</h5>
+	<p>A számítógépes program "instrukcióknak" egy olyan listája, amelyet a számítógépnek "végre kell hajtania".</p>
+	<p>Egy programozási nyelvben ezeket a programozási instrukciókat utasításoknak nevezzük.</p>
+	<p>A Pythonban egy utasítás általában a sor végével záródik. Nem kell pontosvesszőt <code>;</code> használni, 
+	mint sok más programozási nyelvben (például Java vagy C ).</p>
+	<p>A legtöbb Python program sok utasítást tartalmaz.</p>
+	<p>Az utasítások egyenként, ugyanabban a sorrendben hajtódnak végre, ahogyan megírták őket.</p>
+	<p>Több utasítást is írhatunk egy sorba, ha elválasztjuk őket <code>;</code>-vel, de ezt ritkán használjuk, 
+	mert megnehezíti az olvasást.</p>
+	<p>Ha azonban két utasítást teszel ugyanabba a sorba elválasztó karakter (sortörés vagy <code>;</code>) nélkül, 
+	a Python hibát fog dobni.</p>
+	<h5>Kódcsomag (suite):</h5>
+	<p>A Pythonban a <span class="kiemel">kódcsomag</span> egy olyan kódblokk, amely egy vagy több utasításból áll. 
+	Kapcsolódó utasítások csoportosítására szolgál, és jellemzően függvények, 
+	osztályok és vezérlőstruktúrák definiálásakor használják.</p>
+	<p>Egy kódcsomag jellemzően behúzott, azaz minden sora azonos mértékben van behúzva. 
+	A behúzás azt jelzi, hogy a mondatcsomagban lévő utasítások összetartoznak, 
+	és egyetlen blokkként kell kezelni őket.</p>
+	<p>A kódcsomag előtt jellemzően van egy fejlécsor (<span class="kiemel">header line</span>), 
+	amelyet <code>:</code> zár.</p>
+	<h5>Hosszú sorok tördelése:</h5>
+	<p>Az olvashatóság javítása érdekében általában egyetlen kódsor hosszát 79 karakterre korlátozzuk.</p>
+	<p>Egy kódsor kettéválasztásához és annak jelzéséhez, hogy a következő sor nem új sor,
+	 fordított perjelet: "\\" (<span class="kiemel">backslash</span>) használunk. </p>
+	`;
+
+export default betolt_03_jobb_00;

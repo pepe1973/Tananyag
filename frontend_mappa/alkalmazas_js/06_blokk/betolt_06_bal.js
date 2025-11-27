@@ -1,4 +1,4 @@
-let betolt_05_bal = `
+let betolt_06_bal = `
 	<li>
 		<button class="marad lenyit">
 			Login/logout<span class="material-symbols-outlined">expand_circle_down</span>
@@ -12,4 +12,4 @@ let betolt_05_bal = `
 	</div>
 	`;
 
-export default betolt_05_bal;
+export default betolt_06_bal;

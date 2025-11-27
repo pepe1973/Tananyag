@@ -26,6 +26,7 @@ let betolt_01_jobb_00 = `
 		<li>useCallback()</li>
 	<h5>Fogalmak 5:</h5>
 		<li>useMemo()</li>
+		<li>useParam()</li>
 		<li>CORS</li>
 	</ul>
 	`;

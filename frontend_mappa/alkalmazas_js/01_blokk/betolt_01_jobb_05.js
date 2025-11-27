@@ -35,6 +35,28 @@ let betolt_01_jobb_05 = `
 		<div class="kontener">
 			<h3>Fogalom:</h3>
 			<p>
+				<span class="kiemel">useParams()</span>: a <span class="kiemel">React Router useParams</span> hookja hozzáférést biztosít dinamikus
+				<span class="kiemel">URL-paraméterekhez</span> (például /user/:id). Lehetővé teszi a komponensek számára, hogy értékeket
+				kérjenek le az URL-ből, lehetővé téve a dinamikus tartalom megjelenítését az útvonal paraméterei alapján.
+			</p>
+			<p><b>Használata:</b> <code>const { param1, param2, ... } = useParams();</code></p>
+			 
+			<ol>
+				<li>
+					A <span class="kiemel">param1</span>, <span class="kiemel">param2</span> stb. az útvonalban definiált útvonalparaméterek nevei.
+				</li>
+				<li>
+					A <span class="kiemel">useParams</span> függvény egy objektumot ad vissza, ahol a kulcsok a paraméterek nevei,
+					az értékek pedig az URL-ből származó megfelelő értékek.
+				</li>
+			</ol>
+			<p>
+				<a href="https://www.geeksforgeeks.org/reactjs/reactjs-useparams-hook/" target="_blank">GeeksForGeeks: useParams()</a>
+			</p>
+		</div>
+		<div class="kontener">
+			<h3>Fogalom:</h3>
+			<p>
 				<span class="kiemel">CORS (Cross-Origin Resource Sharing):</span> egy webbiztonsági mechanizmus,
 				amely lehetővé teszi, hogy egy weboldal szkriptjei biztonságosan kérjenek erőforrásokat egy másik domainről.
 				Ezt a böngészőoldali szabályozást a szerverek "hívják meg" HTTP fejlécekkel, lehetővé téve a különféle,
